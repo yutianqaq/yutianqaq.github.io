@@ -57,10 +57,10 @@
         <a href="/" class="avatar waves-effect waves-circle waves-light">
           <img src="/img/avatar.jpg">
         </a>
-        <hgroup class="introduce">
+        <!-- <hgroup class="introduce">
           <h5 class="nickname">yutian</h5>
           <a href="mailto:undefined" class="mail">
-        </hgroup>
+        </hgroup> -->
       </div>
     </div>
     <div class="scroll-wrap flex-col">
@@ -69,7 +69,7 @@
             <li class="waves-block waves-effect">
               <a href="/"  >
                 <i class="icon icon-lg icon-home"></i>
-                主页
+                index
               </a>
             </li>
         
@@ -104,7 +104,7 @@
             <li class="waves-block waves-effect">
               <a href="/about"  >
                 <i class="icon icon-lg icon-about"></i>
-                关于
+                about
               </a>
             </li>
         
@@ -272,18 +272,18 @@
 <nav class="post-nav flex-row flex-justify-between">
   
     <div class="waves-block waves-effect prev">
-      <a href="/2023/11/23/Hackthebox-S3-Hospital/" id="post-prev" class="post-nav-link">
+      <a href="/2023/09/06/CheatSheet/" id="post-prev" class="post-nav-link">
         <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
-        <h4 class="title">Hackthebox - S3 - Hospital</h4>
+        <h4 class="title">CheatSheet</h4>
       </a>
     </div>
   
 
   
     <div class="waves-block waves-effect next">
-      <a href="/2023/09/06/CheatSheet/" id="post-next" class="post-nav-link">
+      <a href="/2023/09/06/Cobalt-Strike-CheatSheet/" id="post-next" class="post-nav-link">
         <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
-        <h4 class="title">CheatSheet</h4>
+        <h4 class="title">Cobalt-Strike-CheatSheet</h4>
       </a>
     </div>
   
@@ -431,10 +431,10 @@ var BLOG = { ROOT: '/', SHARE: true, REWARD: false };
     var OriginTitile = document.title, titleTime;
     document.addEventListener('visibilitychange', function() {
         if (document.hidden) {
-            document.title = '死鬼去哪里了！';
+            document.title = 'yutian网络安全学习';
             clearTimeout(titleTime);
         } else {
-            document.title = '(つェ⊂)咦!又好了!';
+            document.title = 'yutian网络安全学习';
             titleTime = setTimeout(function() {
                 document.title = OriginTitile;
             },2000);

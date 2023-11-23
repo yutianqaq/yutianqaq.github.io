@@ -53,10 +53,10 @@
         <a href="/" class="avatar waves-effect waves-circle waves-light">
           <img src="/img/avatar.jpg">
         </a>
-        <hgroup class="introduce">
+        <!-- <hgroup class="introduce">
           <h5 class="nickname">yutian</h5>
           <a href="mailto:undefined" class="mail">
-        </hgroup>
+        </hgroup> -->
       </div>
     </div>
     <div class="scroll-wrap flex-col">
@@ -65,7 +65,7 @@
             <li class="waves-block waves-effect">
               <a href="/"  >
                 <i class="icon icon-lg icon-home"></i>
-                主页
+                index
               </a>
             </li>
         
@@ -100,7 +100,7 @@
             <li class="waves-block waves-effect">
               <a href="/about"  >
                 <i class="icon icon-lg icon-about"></i>
-                关于
+                about
               </a>
             </li>
         
@@ -300,10 +300,10 @@ var BLOG = { ROOT: '/', SHARE: true, REWARD: false };
     var OriginTitile = document.title, titleTime;
     document.addEventListener('visibilitychange', function() {
         if (document.hidden) {
-            document.title = '死鬼去哪里了！';
+            document.title = 'yutian网络安全学习';
             clearTimeout(titleTime);
         } else {
-            document.title = '(つェ⊂)咦!又好了!';
+            document.title = 'yutian网络安全学习';
             titleTime = setTimeout(function() {
                 document.title = OriginTitile;
             },2000);
