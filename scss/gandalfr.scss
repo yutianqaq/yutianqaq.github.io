@@ -1,0 +1,17 @@
+@charset "utf-8";
+
+@import "_partial/normalize";
+@import "_partial/base";
+@import "_partial/header";
+@import "_partial/home-post-list";
+@import "_partial/archive-post-list";
+@import "_partial/post";
+@import "_partial/footer";
+@import "_partial/mq";
+@import "_partial/copyright";
+
+@font-face {
+    font-family: "PingFang SC", "Helvetica Neue", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Helvetica, Arial, Verdana, sans-serif;
+    font-weight: normal;
+    font-style: normal;
+}

