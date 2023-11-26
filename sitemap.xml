@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://yutianqaq.github.io/2023/11/23/Hackthebox-S3-Hospital/</loc>
+    
+    <lastmod>2023-11-26</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://yutianqaq.github.io/2023/11/26/Hackthebox-S3-Devvortex/</loc>
     
     <lastmod>2023-11-26</lastmod>
@@ -12,15 +21,6 @@
   
   <url>
     <loc>https://yutianqaq.github.io/about/index.html</loc>
-    
-    <lastmod>2023-11-23</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://yutianqaq.github.io/2023/11/23/Hackthebox-S3-Hospital/</loc>
     
     <lastmod>2023-11-23</lastmod>
     
@@ -90,6 +90,13 @@
     <priority>1.0</priority>
   </url>
 
+  
+  <url>
+    <loc>https://yutianqaq.github.io/tags/Hakcthebox/</loc>
+    <lastmod>2023-11-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
   
 
   
