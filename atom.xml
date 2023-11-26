@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>yutian - 网络安全博客</title>
+  <title>yutian - 网安学习中...</title>
   
-  <subtitle>网安学习中...</subtitle>
+  <subtitle>网络安全博客</subtitle>
   <link href="https://yutianqaq.github.io/atom.xml" rel="self"/>
   
   <link href="https://yutianqaq.github.io/"/>
