@@ -6,7 +6,7 @@
   <link href="https://yutianqaq.github.io/atom.xml" rel="self"/>
   
   <link href="https://yutianqaq.github.io/"/>
-  <updated>2023-11-29T13:33:51.147Z</updated>
+  <updated>2023-11-29T13:36:50.310Z</updated>
   <id>https://yutianqaq.github.io/</id>
   
   <author>
@@ -21,9 +21,9 @@
     <link href="https://yutianqaq.github.io/2023/11/29/BypassAV-1-%E7%81%AB%E7%BB%92/"/>
     <id>https://yutianqaq.github.io/2023/11/29/BypassAV-1-%E7%81%AB%E7%BB%92/</id>
     <published>2023-11-29T13:33:00.000Z</published>
-    <updated>2023-11-29T13:33:51.147Z</updated>
+    <updated>2023-11-29T13:36:50.310Z</updated>
     
-    <content type="html"><![CDATA[<p>Github 项目 <a href="https://github.com/yutianqaq/BypassAV-1" target="_blank" rel="noopener">https://github.com/yutianqaq/BypassAV-1</a></p><h1 id="BypassAV-1"><a href="#BypassAV-1" class="headerlink" title="BypassAV-1"></a>BypassAV-1</h1><p>通过分离的方式免杀火绒</p><p>读入 msfvenom 或 Cobalt Strike 等 C2 的 Payload 方式分离免杀<br>配合 donut 可以载入 MimiKatz 等工具</p><h1 id="效果"><a href="#效果" class="headerlink" title="效果"></a>效果</h1><p><img src="https://github.com/yutianqaq/BypassAV-1/blob/main/img1.png" alt="Preview"></p>]]></content>
+    <content type="html"><![CDATA[<p>Github 项目 <a href="https://github.com/yutianqaq/BypassAV-1" target="_blank" rel="noopener">https://github.com/yutianqaq/BypassAV-1</a></p><h1 id="BypassAV-1"><a href="#BypassAV-1" class="headerlink" title="BypassAV-1"></a>BypassAV-1</h1><p>通过分离的方式免杀火绒</p><p>读入 Msfvenom 或 Cobalt Strike 等 C2 的 Shellcode 方式分离免杀</p><p>或者配合 donut 可以将 exe、dll 转为 Shellcode 载入 MimiKatz 等工具</p><h1 id="效果"><a href="#效果" class="headerlink" title="效果"></a>效果</h1><p><img src="/2023/11/29/BypassAV-1-%E7%81%AB%E7%BB%92/img1.png" alt="Preview"></p>]]></content>
     
     
       
