@@ -6,7 +6,7 @@
   <link href="https://yutianqaq.github.io/atom.xml" rel="self"/>
   
   <link href="https://yutianqaq.github.io/"/>
-  <updated>2023-11-28T01:25:20.348Z</updated>
+  <updated>2023-11-29T13:33:51.147Z</updated>
   <id>https://yutianqaq.github.io/</id>
   
   <author>
@@ -15,6 +15,26 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>BypassAV-1-火绒</title>
+    <link href="https://yutianqaq.github.io/2023/11/29/BypassAV-1-%E7%81%AB%E7%BB%92/"/>
+    <id>https://yutianqaq.github.io/2023/11/29/BypassAV-1-%E7%81%AB%E7%BB%92/</id>
+    <published>2023-11-29T13:33:00.000Z</published>
+    <updated>2023-11-29T13:33:51.147Z</updated>
+    
+    <content type="html"><![CDATA[<p>Github 项目 <a href="https://github.com/yutianqaq/BypassAV-1" target="_blank" rel="noopener">https://github.com/yutianqaq/BypassAV-1</a></p><h1 id="BypassAV-1"><a href="#BypassAV-1" class="headerlink" title="BypassAV-1"></a>BypassAV-1</h1><p>通过分离的方式免杀火绒</p><p>读入 msfvenom 或 Cobalt Strike 等 C2 的 Payload 方式分离免杀<br>配合 donut 可以载入 MimiKatz 等工具</p><h1 id="效果"><a href="#效果" class="headerlink" title="效果"></a>效果</h1><p><img src="https://github.com/yutianqaq/BypassAV-1/blob/main/img1.png" alt="Preview"></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;Github 项目 &lt;a href=&quot;https://github.com/yutianqaq/BypassAV-1&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;https://github.com/yutianqaq/BypassAV-1&lt;/a&gt;&lt;/p</summary>
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>Rc4Encryption-Loader</title>
@@ -75,6 +95,26 @@
   </entry>
   
   <entry>
+    <title>Beacon Object Files Dev</title>
+    <link href="https://yutianqaq.github.io/2023/09/06/Beacon%20Object%20Files%20Dev/"/>
+    <id>https://yutianqaq.github.io/2023/09/06/Beacon%20Object%20Files%20Dev/</id>
+    <published>2023-09-06T14:25:03.717Z</published>
+    <updated>2023-09-06T14:41:58.700Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h1><p>今天读了 <a href="https://www.cobaltstrike.com/blog/simplifying-bof-development" target="_blank" rel="noopener">Simplifying BOF Development: Debug, Test, and Save Your Bacon | Cobalt Strike</a> 是 Cobalt Strike 官方发布的一篇简化 BOF 开发。</p><h2 id="BOF-是什么"><a href="#BOF-是什么" class="headerlink" title="BOF 是什么"></a>BOF 是什么</h2><p><a href="https://www.cobaltstrike.com/product/features/beacon" target="_blank" rel="noopener">Beacon </a>Object Files (BOFs) 于 2020 年在 Cobalt Strike 4.1 中引入。自发布以来，BOF 在后利用活动中发挥了关键作用，超越了反射 DLL、.NET 程序集和 PowerShell 脚本。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;概述&quot;&gt;&lt;a href=&quot;#概述&quot; class=&quot;headerlink&quot; title=&quot;概述&quot;&gt;&lt;/a&gt;概述&lt;/h1&gt;&lt;p&gt;今天读了 &lt;a href=&quot;https://www.cobaltstrike.com/blog/simplifying-bof-develo</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
     <title>CheatSheet</title>
     <link href="https://yutianqaq.github.io/2023/09/06/CheatSheet/"/>
     <id>https://yutianqaq.github.io/2023/09/06/CheatSheet/</id>
@@ -88,26 +128,6 @@
       
     <summary type="html">&lt;p&gt;&lt;a href=&quot;https://www.thehacker.recipes/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Introduction - The Hacker Recipes&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href=&quot;https://vip</summary>
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>Beacon Object Files Dev</title>
-    <link href="https://yutianqaq.github.io/2023/09/06/Beacon%20Object%20Files%20Dev/"/>
-    <id>https://yutianqaq.github.io/2023/09/06/Beacon%20Object%20Files%20Dev/</id>
-    <published>2023-09-06T14:25:03.717Z</published>
-    <updated>2023-09-06T14:41:58.700Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h1><p>今天读了 <a href="https://www.cobaltstrike.com/blog/simplifying-bof-development" target="_blank" rel="noopener">Simplifying BOF Development: Debug, Test, and Save Your Bacon | Cobalt Strike</a> 是 Cobalt Strike 官方发布的一篇简化 BOF 开发。</p><h2 id="BOF-是什么"><a href="#BOF-是什么" class="headerlink" title="BOF 是什么"></a>BOF 是什么</h2><p><a href="https://www.cobaltstrike.com/product/features/beacon" target="_blank" rel="noopener">Beacon </a>Object Files (BOFs) 于 2020 年在 Cobalt Strike 4.1 中引入。自发布以来，BOF 在后利用活动中发挥了关键作用，超越了反射 DLL、.NET 程序集和 PowerShell 脚本。</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;概述&quot;&gt;&lt;a href=&quot;#概述&quot; class=&quot;headerlink&quot; title=&quot;概述&quot;&gt;&lt;/a&gt;概述&lt;/h1&gt;&lt;p&gt;今天读了 &lt;a href=&quot;https://www.cobaltstrike.com/blog/simplifying-bof-develo</summary>
       
     
     
