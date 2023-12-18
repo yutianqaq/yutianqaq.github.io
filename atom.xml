@@ -6,7 +6,7 @@
   <link href="https://yutianqaq.github.io/atom.xml" rel="self"/>
   
   <link href="https://yutianqaq.github.io/"/>
-  <updated>2023-12-16T10:04:24.054Z</updated>
+  <updated>2023-12-18T02:24:55.187Z</updated>
   <id>https://yutianqaq.github.io/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>卡巴斯基演示</title>
+    <link href="https://yutianqaq.github.io/2023/12/18/%E5%8D%A1%E5%B7%B4%E6%96%AF%E5%9F%BA%E6%BC%94%E7%A4%BA/"/>
+    <id>https://yutianqaq.github.io/2023/12/18/%E5%8D%A1%E5%B7%B4%E6%96%AF%E5%9F%BA%E6%BC%94%E7%A4%BA/</id>
+    <published>2023-12-18T02:22:43.000Z</published>
+    <updated>2023-12-18T02:24:55.187Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="绕过卡巴斯基演示"><a href="#绕过卡巴斯基演示" class="headerlink" title="绕过卡巴斯基演示"></a>绕过卡巴斯基演示</h1><p><video src="demo2.mp4" type="video/mp4" controls="controls" width="100%" height="100%"></video></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;绕过卡巴斯基演示&quot;&gt;&lt;a href=&quot;#绕过卡巴斯基演示&quot; class=&quot;headerlink&quot; title=&quot;绕过卡巴斯基演示&quot;&gt;&lt;/a&gt;绕过卡巴斯基演示&lt;/h1&gt;&lt;p&gt;&lt;video src=&quot;demo2.mp4&quot; type=&quot;video/mp4&quot; contro</summary>
+      
+    
+    
+    
+    
+    <category term="bypassav-demo" scheme="https://yutianqaq.github.io/tags/bypassav-demo/"/>
+    
+  </entry>
   
   <entry>
     <title>内网渗透-端口转发-chisel 使用技巧和增加socks认证</title>

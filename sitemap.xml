@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://yutianqaq.github.io/2023/12/18/%E5%8D%A1%E5%B7%B4%E6%96%AF%E5%9F%BA%E6%BC%94%E7%A4%BA/</loc>
+    
+    <lastmod>2023-12-18</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://yutianqaq.github.io/2023/12/16/%E5%86%85%E7%BD%91%E6%B8%97%E9%80%8F-%E7%AB%AF%E5%8F%A3%E8%BD%AC%E5%8F%91-chisel-%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7%E5%92%8C%E5%A2%9E%E5%8A%A0socks%E8%AE%A4%E8%AF%81/</loc>
     
     <lastmod>2023-12-16</lastmod>
@@ -202,7 +211,7 @@
 
   <url>
     <loc>https://yutianqaq.github.io/</loc>
-    <lastmod>2023-12-16</lastmod>
+    <lastmod>2023-12-18</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -210,28 +219,28 @@
   
   <url>
     <loc>https://yutianqaq.github.io/tags/bypassav/</loc>
-    <lastmod>2023-12-16</lastmod>
+    <lastmod>2023-12-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://yutianqaq.github.io/tags/Hackthebox/</loc>
-    <lastmod>2023-12-16</lastmod>
+    <lastmod>2023-12-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://yutianqaq.github.io/tags/redteam/</loc>
-    <lastmod>2023-12-16</lastmod>
+    <lastmod>2023-12-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://yutianqaq.github.io/tags/bypassav-demo/</loc>
-    <lastmod>2023-12-16</lastmod>
+    <lastmod>2023-12-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
