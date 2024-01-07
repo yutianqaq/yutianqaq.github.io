@@ -6,7 +6,7 @@
   <link href="https://yutianqaq.github.io/atom.xml" rel="self"/>
   
   <link href="https://yutianqaq.github.io/"/>
-  <updated>2024-01-06T13:25:40.705Z</updated>
+  <updated>2024-01-07T08:16:47.263Z</updated>
   <id>https://yutianqaq.github.io/</id>
   
   <author>
@@ -17,13 +17,37 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>免杀-Coablt Strike 插件 一键生成免杀</title>
+    <link href="https://yutianqaq.github.io/2024/01/07/%E5%85%8D%E6%9D%80-Coablt-Strike-%E6%8F%92%E4%BB%B6-%E4%B8%80%E9%94%AE%E7%94%9F%E6%88%90%E5%85%8D%E6%9D%80/"/>
+    <id>https://yutianqaq.github.io/2024/01/07/%E5%85%8D%E6%9D%80-Coablt-Strike-%E6%8F%92%E4%BB%B6-%E4%B8%80%E9%94%AE%E7%94%9F%E6%88%90%E5%85%8D%E6%9D%80/</id>
+    <published>2024-01-07T08:14:39.000Z</published>
+    <updated>2024-01-07T08:16:47.263Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p>免责声明：本工具仅供安全研究和教学目的使用，用户须自行承担因使用该工具而引起的一切法律及相关责任。作者概不对任何法律责任承担责任，且保留随时中止、修改或终止本工具的权利。使用者应当遵循当地法律法规，并理解并同意本声明的所有内容。</p></blockquote><p>Github：<a href="https://github.com/yutianqaq/CSx3Ldr" target="_blank" rel="noopener">https://github.com/yutianqaq/CSx3Ldr</a></p><p>一个 Cobalt Stirke 插件，依赖 nim。</p><p><strong>注意：icon 需要在 &#x2F;tmp&#x2F;icon.o</strong></p><p><strong>安装 nim 环境</strong></p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">apt isntall nim</span><br><span class="line">nimble install winim</span><br></pre></td></tr></table></figure><p>过 qvm 需要图标。编一个放 &#x2F;tmp目录 名为 icon.o</p><p>加载后，工具会出现在 attack -&gt; CSx3Ldr。</p><p>也可以使用快捷键 Ctrl + J。</p><p>过不了就换 icon</p><h2 id="效果图"><a href="#效果图" class="headerlink" title="效果图"></a>效果图</h2><p><img src="/2024/01/07/%E5%85%8D%E6%9D%80-Coablt-Strike-%E6%8F%92%E4%BB%B6-%E4%B8%80%E9%94%AE%E7%94%9F%E6%88%90%E5%85%8D%E6%9D%80/image-20240107161517347.png" alt="image-20240107161517347"></p><h2 id><a href="#" class="headerlink" title></a></h2><h2 id="换-icon"><a href="#换-icon" class="headerlink" title="换 icon"></a>换 icon</h2><p><strong>icon.rc</strong></p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">demo2 ICON &quot;app.ico&quot;</span><br></pre></td></tr></table></figure><p>找小的 ico 图标，比如 5kb、10kb 的</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&gt; x86_64-w64-mingw32-windres -F pe-x86-64 icon.rc -O coff -o icon.o</span><br><span class="line"></span><br><span class="line">&gt; cp icon.o &#x2F;tmp&#x2F;icon.o</span><br></pre></td></tr></table></figure><h1 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h1><p><a href="https://github.com/RCStep/CSSG" target="_blank" rel="noopener">https://github.com/RCStep/CSSG</a></p><p><a href="https://github.com/hack2fun/BypassAV/tree/master" target="_blank" rel="noopener">https://github.com/hack2fun/BypassAV/tree/master</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;免责声明：本工具仅供安全研究和教学目的使用，用户须自行承担因使用该工具而引起的一切法律及相关责任。作者概不对任何法律责任承担责任，且保留随时中止、修改或终止本工具的权利。使用者应当遵循当地法律法规，并理解并同意本声明的所有内容。&lt;/p&gt;
+&lt;/blo</summary>
+      
+    
+    
+    
+    
+    <category term="byassav" scheme="https://yutianqaq.github.io/tags/byassav/"/>
+    
+  </entry>
+  
+  <entry>
     <title>免杀-基于 Spring Boot 在线免杀平台开发记录</title>
     <link href="https://yutianqaq.github.io/2023/12/28/%E5%85%8D%E6%9D%80-%E5%9F%BA%E4%BA%8E-Spring-Boot-%E5%9C%A8%E7%BA%BF%E5%85%8D%E6%9D%80%E5%B9%B3%E5%8F%B0%E5%BC%80%E5%8F%91%E8%AE%B0%E5%BD%95/"/>
     <id>https://yutianqaq.github.io/2023/12/28/%E5%85%8D%E6%9D%80-%E5%9F%BA%E4%BA%8E-Spring-Boot-%E5%9C%A8%E7%BA%BF%E5%85%8D%E6%9D%80%E5%B9%B3%E5%8F%B0%E5%BC%80%E5%8F%91%E8%AE%B0%E5%BD%95/</id>
     <published>2023-12-28T06:31:54.000Z</published>
-    <updated>2024-01-06T13:25:40.705Z</updated>
+    <updated>2024-01-06T14:25:29.935Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="免杀-基于-Spring-Boot-在线免杀平台开发记录"><a href="#免杀-基于-Spring-Boot-在线免杀平台开发记录" class="headerlink" title="免杀-基于 Spring Boot 在线免杀平台开发记录"></a>免杀-基于 Spring Boot 在线免杀平台开发记录</h1><h1 id="前端页面"><a href="#前端页面" class="headerlink" title="前端页面"></a>前端页面</h1><p><img src="/2023/12/28/%E5%85%8D%E6%9D%80-%E5%9F%BA%E4%BA%8E-Spring-Boot-%E5%9C%A8%E7%BA%BF%E5%85%8D%E6%9D%80%E5%B9%B3%E5%8F%B0%E5%BC%80%E5%8F%91%E8%AE%B0%E5%BD%95/demo88.gif" alt="demo"></p><h2 id="开发记录"><a href="#开发记录" class="headerlink" title="开发记录"></a>开发记录</h2><p>2023年12月28日 </p><p>开始开发后端部分，完成基础生成。</p><p>16点07分</p><p>完成 Nim 模板</p><p>完成前端页面</p><p>2023年12月30日</p><p>完成前后端页面，待添加更多模板、异常处理等。</p><p>2024年1月6日</p><p>随机图标</p><p>随机 key xor</p><p>反沙箱</p><p>前端优化</p><p>下载格式修改为 zip 并增加密码保护</p>]]></content>
+    <content type="html"><![CDATA[<h1 id="免杀-基于-Spring-Boot-在线免杀平台开发记录"><a href="#免杀-基于-Spring-Boot-在线免杀平台开发记录" class="headerlink" title="免杀-基于 Spring Boot 在线免杀平台开发记录"></a>免杀-基于 Spring Boot 在线免杀平台开发记录</h1><p><img src="/2023/12/28/%E5%85%8D%E6%9D%80-%E5%9F%BA%E4%BA%8E-Spring-Boot-%E5%9C%A8%E7%BA%BF%E5%85%8D%E6%9D%80%E5%B9%B3%E5%8F%B0%E5%BC%80%E5%8F%91%E8%AE%B0%E5%BD%95/1-6.png" alt="1-6"></p><h1 id="前端页面"><a href="#前端页面" class="headerlink" title="前端页面"></a>前端页面</h1><p><img src="/2023/12/28/%E5%85%8D%E6%9D%80-%E5%9F%BA%E4%BA%8E-Spring-Boot-%E5%9C%A8%E7%BA%BF%E5%85%8D%E6%9D%80%E5%B9%B3%E5%8F%B0%E5%BC%80%E5%8F%91%E8%AE%B0%E5%BD%95/demo88.gif" alt="demo"></p><h2 id="开发记录"><a href="#开发记录" class="headerlink" title="开发记录"></a>开发记录</h2><p>2023年12月28日 </p><p>开始开发后端部分，完成基础生成。</p><p>16点07分</p><p>完成 Nim 模板</p><p>完成前端页面</p><p>2023年12月30日</p><p>完成前后端页面，待添加更多模板、异常处理等。</p><p>2024年1月6日</p><p>随机图标</p><p>随机 key xor</p><p>反沙箱</p><p>前端优化</p><p>下载格式修改为 zip 并增加密码保护</p>]]></content>
     
     
       
@@ -419,26 +443,6 @@
 &lt;p&gt;横向移动主机使用 smb 监听器（有助于在网络中隐匿流量）&lt;/p&gt;
 &lt;ul&gt;
 &lt;l</summary>
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>Hello World</title>
-    <link href="https://yutianqaq.github.io/2023/08/30/hello-world/"/>
-    <id>https://yutianqaq.github.io/2023/08/30/hello-world/</id>
-    <published>2023-08-30T13:10:56.391Z</published>
-    <updated>2023-08-30T13:10:56.391Z</updated>
-    
-    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.</summary>
       
     
     

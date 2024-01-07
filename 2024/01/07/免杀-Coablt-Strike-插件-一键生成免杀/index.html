@@ -1,0 +1,28 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="X-UA-Compatible" content="IE=edge"><title>免杀-Coablt Strike 插件 一键生成免杀 · yutian's blog</title><meta name="description" content="免杀-Coablt Strike 插件 一键生成免杀 - yutian"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="icon" href="/logo.ico"><link rel="stylesheet" href="/css/gandalfr.css"><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/styles/solarized-light.min.css"><link rel="search" type="application/opensearchdescription+xml" href="https://yutianqaq.github.io/atom.xml" title="yutian's blog"><meta name="generator" content="Hexo 4.2.1"><link rel="alternate" href="/atom.xml" title="yutian's blog" type="application/atom+xml">
+</head><body><div class="wrap"><header><a href="/" class="logo-link"><img src="https://yutianqaq.github.io/2023/11/23/Hackthebox-S3-Hospital/logo.jpg" alt="logo"></a><ul class="nav nav-list"><li class="nav-list-item"><a href="https://github.com/yutianqaq" target="_blank" class="nav-list-link">GITHUB</a></li><li class="nav-list-item"><a href="/archives/" target="_self" class="nav-list-link">ARCHIVE</a></li><li class="nav-list-item"><a href="/about" target="_self" class="nav-list-link">ABOUT</a></li><li class="nav-list-item"><a href="/hack-tools" target="_self" class="nav-list-link">TOOLS</a></li><li class="nav-list-item"><a href="/CheatSheet" target="_self" class="nav-list-link">CHEATSHEET</a></li><li class="nav-list-item"><a href="/CodeSnippets" target="_self" class="nav-list-link">CODESNIPPETS</a></li><li class="nav-list-item"><a href="/atom.xml" target="_self" class="nav-list-link">RSS</a></li></ul></header><main class="container"><div class="post"><article class="post-block"><h1 class="post-title">免杀-Coablt Strike 插件 一键生成免杀</h1><div class="tags"><a href="/tags/byassav/" class="tag-title">#byassav</a></div><div class="post-info">Jan 7, 2024</div><div class="post-content"><blockquote>
+<p>免责声明：本工具仅供安全研究和教学目的使用，用户须自行承担因使用该工具而引起的一切法律及相关责任。作者概不对任何法律责任承担责任，且保留随时中止、修改或终止本工具的权利。使用者应当遵循当地法律法规，并理解并同意本声明的所有内容。</p>
+</blockquote>
+<p>Github：<a href="https://github.com/yutianqaq/CSx3Ldr" target="_blank" rel="noopener">https://github.com/yutianqaq/CSx3Ldr</a></p>
+<p>一个 Cobalt Stirke 插件，依赖 nim。</p>
+<p><strong>注意：icon 需要在 &#x2F;tmp&#x2F;icon.o</strong></p>
+<p><strong>安装 nim 环境</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">apt isntall nim</span><br><span class="line">nimble install winim</span><br></pre></td></tr></table></figure>
+
+<p>过 qvm 需要图标。编一个放 &#x2F;tmp目录 名为 icon.o</p>
+<p>加载后，工具会出现在 attack -&gt; CSx3Ldr。</p>
+<p>也可以使用快捷键 Ctrl + J。</p>
+<p>过不了就换 icon</p>
+<h2 id="效果图"><a href="#效果图" class="headerlink" title="效果图"></a>效果图</h2><p><img src="/2024/01/07/%E5%85%8D%E6%9D%80-Coablt-Strike-%E6%8F%92%E4%BB%B6-%E4%B8%80%E9%94%AE%E7%94%9F%E6%88%90%E5%85%8D%E6%9D%80/image-20240107161517347.png" alt="image-20240107161517347"></p>
+<h2 id><a href="#" class="headerlink" title></a></h2><h2 id="换-icon"><a href="#换-icon" class="headerlink" title="换 icon"></a>换 icon</h2><p><strong>icon.rc</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">demo2 ICON &quot;app.ico&quot;</span><br></pre></td></tr></table></figure>
+
+<p>找小的 ico 图标，比如 5kb、10kb 的</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&gt; x86_64-w64-mingw32-windres -F pe-x86-64 icon.rc -O coff -o icon.o</span><br><span class="line"></span><br><span class="line">&gt; cp icon.o &#x2F;tmp&#x2F;icon.o</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+<h1 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h1><p><a href="https://github.com/RCStep/CSSG" target="_blank" rel="noopener">https://github.com/RCStep/CSSG</a></p>
+<p><a href="https://github.com/hack2fun/BypassAV/tree/master" target="_blank" rel="noopener">https://github.com/hack2fun/BypassAV/tree/master</a></p>
+</div></article></div><span id="busuanzi_container_page_pv"></span> 本文总阅读量<span id="busuanzi_value_page_pv"></span></main><footer><div class="paginator"><a href="/2023/12/28/%E5%85%8D%E6%9D%80-%E5%9F%BA%E4%BA%8E-Spring-Boot-%E5%9C%A8%E7%BA%BF%E5%85%8D%E6%9D%80%E5%B9%B3%E5%8F%B0%E5%BC%80%E5%8F%91%E8%AE%B0%E5%BD%95/" class="next">NEXT</a></div><div class="copyright"><p>© 2023 - 2024 <a href="https://yutianqaq.github.io">yutian</a>, powered by <a href="https://hexo.io/" target="_blank">Hexo</a> and <a href="https://github.com/MikeCoder/hexo-theme-gandalfr" target="_blank">hexo-theme-gandalfr</a>.</p><span id="busuanzi_container_site_pv"> </span>本站总访问量<span id="busuanzi_value_site_pv"> </span>次<span id="busuanzi_container_site_uv"> </span>本站总访客量<span id="busuanzi_value_site_uv"> </span>次</div></footer></div><script src="//cdn.bootcss.com/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML" integrity="sha384-crwIf/BuaWM9rM65iM+dWFldgQ1Un8jWZMuh3puxb8TOY9+linwLoI7ZHZT+aekW" crossorigin="anonymous"></script><script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/highlight.min.js" crossorigin="anonymous"></script><script src="//cdn.bootcss.com/jquery/3.1.1/jquery.js" crossorigin="anonymous"></script><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" crossorigin="anonymous"></script><script>$(document).ready(function() { hljs.configure({useBR: true}); $('pre').each(function(i, block) { hljs.highlightBlock(block); }); });</script></body></html>
