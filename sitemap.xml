@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://yutianqaq.github.io/Board/index.html</loc>
+    
+    <lastmod>2024-02-04</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://yutianqaq.github.io/2024/02/01/AVEC-%E4%B8%BA%E7%BC%96%E8%AF%91%E5%90%8E%E7%9A%84%E5%8F%AF%E6%89%A7%E8%A1%8C%E7%A8%8B%E5%BA%8F%E6%B7%BB%E5%8A%A0%E8%B5%84%E6%BA%90/</loc>
     
     <lastmod>2024-02-01</lastmod>
@@ -14,15 +23,6 @@
     <loc>https://yutianqaq.github.io/CheatSheet/index.html</loc>
     
     <lastmod>2024-02-01</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://yutianqaq.github.io/Board/index.html</loc>
-    
-    <lastmod>2024-01-29</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -256,7 +256,7 @@
 
   <url>
     <loc>https://yutianqaq.github.io/</loc>
-    <lastmod>2024-02-01</lastmod>
+    <lastmod>2024-02-06</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -264,42 +264,42 @@
   
   <url>
     <loc>https://yutianqaq.github.io/tags/bypassav/</loc>
-    <lastmod>2024-02-01</lastmod>
+    <lastmod>2024-02-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://yutianqaq.github.io/tags/Hackthebox/</loc>
-    <lastmod>2024-02-01</lastmod>
+    <lastmod>2024-02-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://yutianqaq.github.io/tags/redteam/</loc>
-    <lastmod>2024-02-01</lastmod>
+    <lastmod>2024-02-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://yutianqaq.github.io/tags/bypassav-demo/</loc>
-    <lastmod>2024-02-01</lastmod>
+    <lastmod>2024-02-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://yutianqaq.github.io/tags/Tools/</loc>
-    <lastmod>2024-02-01</lastmod>
+    <lastmod>2024-02-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://yutianqaq.github.io/tags/byassav/</loc>
-    <lastmod>2024-02-01</lastmod>
+    <lastmod>2024-02-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
