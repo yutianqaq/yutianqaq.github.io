@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on yutian's blog</title><link>https://yutianovo.github.com/post/</link><description>Recent content in Posts on yutian's blog</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Mon, 25 Nov 2024 22:48:38 +0800</lastBuildDate><atom:link href="https://yutianovo.github.com/post/index.xml" rel="self" type="application/rss+xml"/><item><title>Hugo 博客搭建时的问题</title><link>https://yutianovo.github.com/p/hugo-%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E6%97%B6%E7%9A%84%E9%97%AE%E9%A2%98/</link><pubDate>Mon, 25 Nov 2024 22:48:38 +0800</pubDate><guid>https://yutianovo.github.com/p/hugo-%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E6%97%B6%E7%9A%84%E9%97%AE%E9%A2%98/</guid><description>&lt;h2 id="不会自动换行">不会自动换行
+&lt;/h2>&lt;p>打开 hugo 博客的文件夹，全局搜索 goldmark&lt;br>
+如果是 toml 格式，就改为下面的内容&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-toml" data-lang="toml">&lt;span class="line">&lt;span class="cl">&lt;span class="p">[&lt;/span>&lt;span class="nx">goldmark&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">renderer&lt;/span>&lt;span class="p">]&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nx">unsafe&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="kc">true&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nx">hardwraps&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="kc">true&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>yaml 格式&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-yaml" data-lang="yaml">&lt;span class="line">&lt;span class="cl">&lt;span class="nt">markup&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">goldmark&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">renderer&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">hardWraps&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="kc">true&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div></description></item><item><title>Clash Verge 将订阅中的代理地址作为单个端口开放</title><link>https://yutianovo.github.com/p/clash-verge-%E5%B0%86%E8%AE%A2%E9%98%85%E4%B8%AD%E7%9A%84%E4%BB%A3%E7%90%86%E5%9C%B0%E5%9D%80%E4%BD%9C%E4%B8%BA%E5%8D%95%E4%B8%AA%E7%AB%AF%E5%8F%A3%E5%BC%80%E6%94%BE/</link><pubDate>Mon, 25 Nov 2024 22:24:27 +0800</pubDate><guid>https://yutianovo.github.com/p/clash-verge-%E5%B0%86%E8%AE%A2%E9%98%85%E4%B8%AD%E7%9A%84%E4%BB%A3%E7%90%86%E5%9C%B0%E5%9D%80%E4%BD%9C%E4%B8%BA%E5%8D%95%E4%B8%AA%E7%AB%AF%E5%8F%A3%E5%BC%80%E6%94%BE/</guid><description>&lt;p>来到 Profile 选中订阅地址，点击右键选择 Open File&lt;/p>
+&lt;p>&lt;img src="https://yutianovo.github.com/p/clash-verge-%E5%B0%86%E8%AE%A2%E9%98%85%E4%B8%AD%E7%9A%84%E4%BB%A3%E7%90%86%E5%9C%B0%E5%9D%80%E4%BD%9C%E4%B8%BA%E5%8D%95%E4%B8%AA%E7%AB%AF%E5%8F%A3%E5%BC%80%E6%94%BE/9ac6f43ecd25db757eebd1b949da3496.png"
+width="496"
+height="678"
+srcset="https://yutianovo.github.com/p/clash-verge-%E5%B0%86%E8%AE%A2%E9%98%85%E4%B8%AD%E7%9A%84%E4%BB%A3%E7%90%86%E5%9C%B0%E5%9D%80%E4%BD%9C%E4%B8%BA%E5%8D%95%E4%B8%AA%E7%AB%AF%E5%8F%A3%E5%BC%80%E6%94%BE/9ac6f43ecd25db757eebd1b949da3496_hu2268036500667999924.png 480w, https://yutianovo.github.com/p/clash-verge-%E5%B0%86%E8%AE%A2%E9%98%85%E4%B8%AD%E7%9A%84%E4%BB%A3%E7%90%86%E5%9C%B0%E5%9D%80%E4%BD%9C%E4%B8%BA%E5%8D%95%E4%B8%AA%E7%AB%AF%E5%8F%A3%E5%BC%80%E6%94%BE/9ac6f43ecd25db757eebd1b949da3496_hu2776723669482046301.png 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="73"
+data-flex-basis="175px"
+>&lt;/p>
+&lt;p>在 proxies 上方新增如下内容&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;span class="lnt">15
+&lt;/span>&lt;span class="lnt">16
+&lt;/span>&lt;span class="lnt">17
+&lt;/span>&lt;span class="lnt">18
+&lt;/span>&lt;span class="lnt">19
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-yaml" data-lang="yaml">&lt;span class="line">&lt;span class="cl">&lt;span class="nt">listeners&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>- &lt;span class="nt">name&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">mixed-in&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">type&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">mixed&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">port&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="m">17891&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">listen&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="m">127.0.0.1&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">proxy&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">proxies 中的 name 字段1&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">users&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>- &lt;span class="nt">admin&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">password &lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>- &lt;span class="nt">name&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">socks-in&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">type&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">socks&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">port&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="m">17892&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">listen&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="m">127.0.0.1&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">proxy&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">proxies 中的 name 字段2&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>- &lt;span class="nt">name&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">http-in&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">type&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">http&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">port&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="m">17893&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">listen&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="m">127.0.0.1&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">proxy&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">proxies 中的 name 字段3&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;blockquote>
+&lt;p>当有 &lt;code>users&lt;/code> 字段时将作为需认证的代理&lt;br>
+mixed 为将socks/http合并，socks 为仅限socks，http 为仅限 http&lt;br>
+name需要唯一&lt;br>
+proxy字段需要填写对应的 proxies 中的 name 字段&lt;/p>
+&lt;/blockquote>
+&lt;p>修改后&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">port: &lt;span class="m">7890&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">socks-port: &lt;span class="m">7891&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">allow-lan: &lt;span class="nb">true&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">mode: Rule
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">log-level: info
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">external-controller: 127.0.0.1:9090
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">listeners:
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> - name: mixed-in
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> type: mixed
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> port: &lt;span class="m">17891&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> listen: 127.0.0.1
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> proxy: &lt;span class="s2">&amp;#34;proxies 中的 name 字段&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">proxies:
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> - &lt;span class="o">{&lt;/span>name: 🇭🇰 港hk, server: ...&lt;span class="o">[&lt;/span>snip&lt;span class="o">]&lt;/span>... true&lt;span class="o">}&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>完成后选择重启应用，当订阅更新时，配置将消失&lt;/p>
+&lt;p>&lt;img src="https://yutianovo.github.com/p/clash-verge-%E5%B0%86%E8%AE%A2%E9%98%85%E4%B8%AD%E7%9A%84%E4%BB%A3%E7%90%86%E5%9C%B0%E5%9D%80%E4%BD%9C%E4%B8%BA%E5%8D%95%E4%B8%AA%E7%AB%AF%E5%8F%A3%E5%BC%80%E6%94%BE/c8bebe5e750f709686b05a66f046739b.png"
+width="519"
+height="208"
+srcset="https://yutianovo.github.com/p/clash-verge-%E5%B0%86%E8%AE%A2%E9%98%85%E4%B8%AD%E7%9A%84%E4%BB%A3%E7%90%86%E5%9C%B0%E5%9D%80%E4%BD%9C%E4%B8%BA%E5%8D%95%E4%B8%AA%E7%AB%AF%E5%8F%A3%E5%BC%80%E6%94%BE/c8bebe5e750f709686b05a66f046739b_hu11015614609914131147.png 480w, https://yutianovo.github.com/p/clash-verge-%E5%B0%86%E8%AE%A2%E9%98%85%E4%B8%AD%E7%9A%84%E4%BB%A3%E7%90%86%E5%9C%B0%E5%9D%80%E4%BD%9C%E4%B8%BA%E5%8D%95%E4%B8%AA%E7%AB%AF%E5%8F%A3%E5%BC%80%E6%94%BE/c8bebe5e750f709686b05a66f046739b_hu586205564277141581.png 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="249"
+data-flex-basis="598px"
+>&lt;/p></description></item><item><title>Docker 入门</title><link>https://yutianovo.github.com/p/docker-%E5%85%A5%E9%97%A8/</link><pubDate>Sun, 17 Nov 2024 16:36:42 +0800</pubDate><guid>https://yutianovo.github.com/p/docker-%E5%85%A5%E9%97%A8/</guid><description>&lt;h2 id="安装">安装
+&lt;/h2>&lt;h2 id="基础操作">基础操作
+&lt;/h2>&lt;h2 id="进阶操作">进阶操作
+&lt;/h2></description></item><item><title>低延迟连接hackthebox</title><link>https://yutianovo.github.com/p/%E4%BD%8E%E5%BB%B6%E8%BF%9F%E8%BF%9E%E6%8E%A5hackthebox/</link><pubDate>Fri, 15 Nov 2024 21:17:35 +0800</pubDate><guid>https://yutianovo.github.com/p/%E4%BD%8E%E5%BB%B6%E8%BF%9F%E8%BF%9E%E6%8E%A5hackthebox/</guid><description>&lt;p>123&lt;/p></description></item></channel></rss>

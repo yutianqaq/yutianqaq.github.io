@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Pages on yutian's blog</title><link>https://yutianovo.github.com/page/</link><description>Recent content in Pages on yutian's blog</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Sun, 06 Mar 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://yutianovo.github.com/page/index.xml" rel="self" type="application/rss+xml"/><item><title>Archives</title><link>https://yutianovo.github.com/archives/</link><pubDate>Sun, 06 Mar 2022 00:00:00 +0000</pubDate><guid>https://yutianovo.github.com/archives/</guid><description/></item><item><title>CheatSheet</title><link>https://yutianovo.github.com/cheatsheet/</link><pubDate>Sun, 06 Mar 2022 00:00:00 +0000</pubDate><guid>https://yutianovo.github.com/cheatsheet/</guid><description>&lt;h2 id="cheat-sheet">Cheat Sheet
+&lt;/h2>&lt;p>&lt;a class="link" href="https://yutianqaq.github.io/hack-tools/" target="_blank" rel="noopener"
+>HackTools&lt;/a> &lt;a class="link" href="https://gist.github.com/yutianqaq" target="_blank" rel="noopener"
+>代码片段&lt;/a> &lt;a class="link" href="https://gist.github.com/yutianqaq/9529b55a7bee6c51f91d6cf975f9e7af" target="_blank" rel="noopener"
+>工具集合&lt;/a>&lt;/p>
+&lt;h3 id="编译命令_go">编译命令_Go
+&lt;/h3>&lt;p>&lt;code>go install mvdan.cc/garble@latest&lt;/code>&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># garble&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nv">CGO_ENABLED&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="m">0&lt;/span> &lt;span class="nv">GOOS&lt;/span>&lt;span class="o">=&lt;/span>windows &lt;span class="nv">GOARCH&lt;/span>&lt;span class="o">=&lt;/span>amd64 garble -tiny -literals -seed&lt;span class="o">=&lt;/span>random build -ldflags &lt;span class="s2">&amp;#34;-s -w -H=windowsgui&amp;#34;&lt;/span> -trimpath -o hello-grable.exe
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nv">CGO_ENABLED&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="m">0&lt;/span> &lt;span class="nv">GOOS&lt;/span>&lt;span class="o">=&lt;/span>windows &lt;span class="nv">GOARCH&lt;/span>&lt;span class="o">=&lt;/span>amd64 garble -seed&lt;span class="o">=&lt;/span>random build -ldflags &lt;span class="s2">&amp;#34;-s -w -H=windowsgui&amp;#34;&lt;/span> -trimpath -o hello-grable.exe
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># go&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nv">CGO_ENABLED&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="m">0&lt;/span> &lt;span class="nv">GOOS&lt;/span>&lt;span class="o">=&lt;/span>windows &lt;span class="nv">GOARCH&lt;/span>&lt;span class="o">=&lt;/span>amd64 go build -ldflags &lt;span class="s2">&amp;#34;-s -w -H=windowsgui&amp;#34;&lt;/span> -trimpath
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">## windows&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nb">set&lt;/span> &lt;span class="nv">CGO_ENABLED&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="m">0&lt;/span> &lt;span class="o">&amp;amp;&amp;amp;&lt;/span> &lt;span class="nb">set&lt;/span> &lt;span class="nv">GOOS&lt;/span>&lt;span class="o">=&lt;/span>windows &lt;span class="o">&amp;amp;&amp;amp;&lt;/span> &lt;span class="nb">set&lt;/span> &lt;span class="nv">GOARCH&lt;/span>&lt;span class="o">=&lt;/span>amd64 &lt;span class="o">&amp;amp;&amp;amp;&lt;/span> go build -ldflags &lt;span class="s2">&amp;#34;-s -w -H=windowsgui&amp;#34;&lt;/span> -trimpath
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h3 id="devenvexe">devenv.exe
+&lt;/h3>&lt;p>&lt;a class="link" href="https://learn.microsoft.com/en-us/visualstudio/ide/reference/devenv-command-line-switches?view=vs-2022" target="_blank" rel="noopener"
+>Devenv command line switches - Visual Studio | Microsoft Learn&lt;/a>&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">devenv /build Release .\Project.sln
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>用于更新平时在 github、x 看到的项目、技巧等&lt;/p>
+&lt;p>&lt;a class="link" href="https://pauljerimy.com/security-certification-roadmap/" target="_blank" rel="noopener"
+>https://pauljerimy.com/security-certification-roadmap/&lt;/a> - 证书表格&lt;/p>
+&lt;p>&lt;a class="link" href="https://ntdoc.m417z.com/" target="_blank" rel="noopener"
+>https://ntdoc.m417z.com/&lt;/a> - Nt 文档&lt;/p>
+&lt;p>&lt;a class="link" href="https://github.com/Flangvik/SharpCollection" target="_blank" rel="noopener"
+>https://github.com/Flangvik/SharpCollection&lt;/a> - C# 工具集&lt;/p>
+&lt;h2 id="命令帮助">命令帮助
+&lt;/h2>&lt;p>&lt;a class="link" href="https://yutianqaq.github.io/rubeus.txt" target="_blank" rel="noopener"
+>rubeus.exe&lt;/a> - &lt;a class="link" href="https://yutianqaq.github.io/sharphound.txt" target="_blank" rel="noopener"
+>sharphound.exe&lt;/a> - &lt;a class="link" href="https://github.com/skahwah/SQLRecon/wiki" target="_blank" rel="noopener"
+>sqlrecon.exe&lt;/a> - &lt;a class="link" href="https://yutianqaq.github.io/sigthief.txt" target="_blank" rel="noopener"
+>sigthief.py&lt;/a>&lt;/p>
+&lt;h3 id="信息搜集">信息搜集
+&lt;/h3>&lt;p>&lt;a class="link" href="https://taksec.github.io/google-dorks-bug-bounty/" target="_blank" rel="noopener"
+>Google Dorks for Bug Bounty&lt;/a> - Google Dorks 语法自动生成工具&lt;br>
+&lt;a class="link" href="https://github.com/msd0pe-1/cve-maker" target="_blank" rel="noopener"
+>https://github.com/msd0pe-1/cve-maker&lt;/a> - cve 搜索工具&lt;br>
+&lt;a class="link" href="https://github.com/vdjagilev/nmap-formatter" target="_blank" rel="noopener"
+>https://github.com/vdjagilev/nmap-formatter&lt;/a> - xml2cvs、json、html&lt;br>
+&lt;a class="link" href="https://github.com/projectdiscovery/httpx" target="_blank" rel="noopener"
+>https://github.com/projectdiscovery/httpx&lt;/a> - 存活、标题、指纹、技术探测&lt;/p>
+&lt;h3 id="利用">利用
+&lt;/h3>&lt;p>&lt;a class="link" href="https://github.com/projectdiscovery/nuclei" target="_blank" rel="noopener"
+>https://github.com/projectdiscovery/nuclei&lt;/a> - 基于模板的 POC 验证工具&lt;/p>
+&lt;h2 id="规避杀软">规避杀软
+&lt;/h2>&lt;h3 id="nim">Nim
+&lt;/h3>&lt;p>&lt;a class="link" href="https://github.com/icyguider/Nimcrypt2" target="_blank" rel="noopener"
+>icyguider/Nimcrypt2: .NET, PE, &amp;amp; Raw Shellcode Packer/Loader Written in Nim&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://github.com/aeverj/NimShellCodeLoader" target="_blank" rel="noopener"
+>aeverj/NimShellCodeLoader: 使用nim编写的shellcode加载器&lt;/a>&lt;/p>
+&lt;h2 id="cobalt-strike">Cobalt Strike
+&lt;/h2>&lt;h3 id="bof">BOF
+&lt;/h3>&lt;p>&lt;a class="link" href="https://github.com/ajpc500/BOFs" target="_blank" rel="noopener"
+>https://github.com/ajpc500/BOFs&lt;/a> - Collection of Beacon Object Files&lt;/p>
+&lt;h3 id="插件">插件
+&lt;/h3>&lt;p>&lt;a class="link" href="https://github.com/0xthirteen/MoveKit" target="_blank" rel="noopener"
+>https://github.com/0xthirteen/MoveKit&lt;/a> - 横向移动&lt;/p>
+&lt;p>&lt;a class="link" href="https://github.com/yutianqaq/CSx3Ldr" target="_blank" rel="noopener"
+>https://github.com/yutianqaq/CSx3Ldr&lt;/a> - 免杀 Nim&lt;/p></description></item><item><title>About</title><link>https://yutianovo.github.com/about/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://yutianovo.github.com/about/</guid><description>&lt;p>Github：https://github.com/yutianqaq&lt;/p>
+&lt;p>微信公众号：赛博雨天&lt;/p>
+&lt;h1 id="开源项目">开源项目
+&lt;/h1>&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>工具名称&lt;/th>
+&lt;th>项目链接&lt;/th>
+&lt;th>工具名称&lt;/th>
+&lt;th>项目链接&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>Spring Boot | 可定制的在线免杀平台&lt;/td>
+&lt;td>&lt;a class="link" href="https://github.com/yutianqaq/AVEvasionCraftOnline" target="_blank" rel="noopener"
+>AVEvasionCraftOnline&lt;/a>&lt;/td>
+&lt;td>Nim | 简单快捷的 CS 一键免杀插件&lt;/td>
+&lt;td>&lt;a class="link" href="https://github.com/yutianqaq/CSx3Ldr" target="_blank" rel="noopener"
+>CSx3Ldr&lt;/a>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Go | 多种Shellcode加密方式并自动生成解密方式&lt;/td>
+&lt;td>&lt;a class="link" href="https://github.com/yutianqaq/Supernova_CN" target="_blank" rel="noopener"
+>Supernova_CN&lt;/a>&lt;/td>
+&lt;td>Nim | 免杀 - x2Ldr&lt;/td>
+&lt;td>&lt;a class="link" href="https://github.com/yutianqaq/x2Ldr" target="_blank" rel="noopener"
+>x2Ldr&lt;/a>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Go | 二进制文件熵计算&lt;/td>
+&lt;td>&lt;a class="link" href="https://github.com/yutianqaq/EntropyCalc_Go" target="_blank" rel="noopener"
+>EntropyCalc_Go&lt;/a>&lt;/td>
+&lt;td>C | 本地分离免杀 - x1Ldr&lt;/td>
+&lt;td>&lt;a class="link" href="https://github.com/yutianqaq/x1Ldr" target="_blank" rel="noopener"
+>x1Ldr&lt;/a>&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;h1 id="认证">认证
+&lt;/h1>&lt;p>&lt;a style="display: inline;" href="https://api.eu.badgr.io/public/assertions/bVOCm2Z1QlKO3GhyDahfng">&lt;img style="display: inline;" src="crto.png" alt="CRTO" width="100" height="100" />&lt;/a>&lt;/p>
+&lt;h1 id="hackthebox">Hackthebox
+&lt;/h1>&lt;p>&lt;a href="https://app.hackthebox.com/profile/244079" target="_blank" rel="noopener">&lt;img src="http://www.hackthebox.eu/badge/image/244079">&lt;/a>&lt;/p></description></item><item><title>Search</title><link>https://yutianovo.github.com/search/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://yutianovo.github.com/search/</guid><description/></item><item><title>Tools</title><link>https://yutianovo.github.com/tools/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://yutianovo.github.com/tools/</guid><description>&lt;h1 id="heading">
+&lt;/h1>&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>描述&lt;/th>
+&lt;th>链接&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>反弹 shell 命令生成，Payload 集合&lt;/td>
+&lt;td>&lt;a class="link" href="https://yutianovo.github.com/hack-tools" >hack-tools&lt;/a>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>谷歌暗黑语法&lt;/td>
+&lt;td>&lt;a class="link" href="https://yutianovo.github.com/google-dorks-bug-bounty" >google-dorks-bug-bounty&lt;/a>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table></description></item></channel></rss>
