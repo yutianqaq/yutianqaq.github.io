@@ -2,11 +2,8 @@
 title: "Hugo 博客搭建时的问题"
 description: 
 date: 2024-11-25T22:48:38+08:00
-image: 
-math: 
-license: 
 hidden: false
-comments: true
+comments: false
 draft: false
 ---
 
