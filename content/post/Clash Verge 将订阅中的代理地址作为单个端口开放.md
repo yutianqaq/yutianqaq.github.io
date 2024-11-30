@@ -10,7 +10,7 @@ comments: true
 draft: false
 ---
 
-来到 Profile 选中订阅地址，点击右键选择 Open File
+来到 Profile 选中订阅地址，点击右键选择 Open File 或者 Edit File
 
 !![Image Description](/images/Pasted%20image%2020241130213818.png)
 
@@ -60,7 +60,7 @@ proxies:
   - {name: 🇭🇰 港hk, server: ...[snip]... true}
 ```
 
-完成后选择重启应用，当订阅更新时，配置将消失
+完成后选择重启应用，当订阅更新时，配置将消失。
 
 !![Image Description](/images/Pasted%20image%2020241130213828.png)
 
