@@ -21,19 +21,19 @@ listeners:
     type: mixed
     port: 27891
     listen: 127.0.0.1
-    proxy: proxies 中的 name 字段1
+    proxy: proxies 中的 name 字段 - 美国节点
     users: 
 	  - admin: password 
   - name: socks-in
     type: socks
     port: 27892
     listen: 127.0.0.1
-    proxy: proxies 中的 name 字段2
+    proxy: proxies 中的 name 字段 - 新加坡节点
   - name: http-in
     type: http
     port: 27893
     listen: 127.0.0.1
-    proxy: proxies 中的 name 字段3
+    proxy: proxies 中的 name 字段 - 香港节点
     
 ```
 > 当有 `users` 字段时将作为需认证的代理
@@ -42,7 +42,7 @@ listeners:
 > proxy 字段需要填写对应的 proxies 中的 name 字段
 
 
-修改后
+以下配置将在本地启动一个节点，归属为香港，并开放同时支持 HTTP 和 SOCKS 协议的端口 `17891`
 ```bash
 port: 7890
 socks-port: 7891
@@ -55,7 +55,7 @@ listeners:
     type: mixed
     port: 17891
     listen: 127.0.0.1
-    proxy: "proxies 中的 name 字段"
+    proxy: "🇭🇰 港hk"
 proxies:
   - {name: 🇭🇰 港hk, server: ...[snip]... true}
 ```
