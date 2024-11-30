@@ -5,7 +5,7 @@ $sourcePath = "C:\Users\yutian\book\posts"
 $destinationPath = "D:\YT-WorkSpace\blog\yutianovo.github.io\content\post"
 
 # Set Github repo 
-$myrepo = "yutianovo.github.io"
+$myrepo = "yutianqaq.github.io"
 
 # Set error handling
 $ErrorActionPreference = "Stop"
