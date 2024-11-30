@@ -12,34 +12,34 @@ draft: false
 
 来到 Profile 选中订阅地址，点击右键选择 Open File
 
-![](9ac6f43ecd25db757eebd1b949da3496.png)
+!![Image Description](/images/Pasted%20image%2020241130213818.png)
 
 在 proxies 上方新增如下内容
 ```yaml
 listeners:
   - name: mixed-in
     type: mixed
-    port: 17891
+    port: 27891
     listen: 127.0.0.1
     proxy: proxies 中的 name 字段1
     users: 
 	  - admin: password 
   - name: socks-in
     type: socks
-    port: 17892
+    port: 27892
     listen: 127.0.0.1
     proxy: proxies 中的 name 字段2
   - name: http-in
     type: http
-    port: 17893
+    port: 27893
     listen: 127.0.0.1
     proxy: proxies 中的 name 字段3
     
 ```
 > 当有 `users` 字段时将作为需认证的代理
 > mixed 为将socks/http合并，socks 为仅限socks，http 为仅限 http
-> name需要唯一
->proxy字段需要填写对应的 proxies 中的 name 字段
+> name 需要唯一
+> proxy 字段需要填写对应的 proxies 中的 name 字段
 
 
 修改后
@@ -62,8 +62,6 @@ proxies:
 
 完成后选择重启应用，当订阅更新时，配置将消失
 
-![](c8bebe5e750f709686b05a66f046739b.png)
+!![Image Description](/images/Pasted%20image%2020241130213828.png)
 
  
-
-![](chrome-extension://mapjgeachilmcbbokkgcbgpbakaaeehi/assets/check.svg)
