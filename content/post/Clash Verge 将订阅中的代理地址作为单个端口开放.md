@@ -33,7 +33,7 @@ listeners:
     proxy: proxies 中的 name 字段 - 香港节点
     
 ```
->[!NOTE] 
+>[!note] 
 > 当有 `users` 字段时将作为需认证的代理
 > mixed 为将socks/http合并，socks 为仅限socks，http 为仅限 http
 > name 需要唯一

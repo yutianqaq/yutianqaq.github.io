@@ -12,6 +12,9 @@ enable = true
 block = [['\[', '\]'], ['$$', '$$']]
 inline = [['\(', '\)']]
 
+[goldmark.parser.attribute]
+block = true
+
 [tableOfContents]
 endLevel = 4
 ordered = true
