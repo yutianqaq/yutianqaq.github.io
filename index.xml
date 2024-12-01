@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>yutian's blog</title><link>https://yutianovo.github.com/</link><description>Recent content on yutian's blog</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Sat, 30 Nov 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://yutianovo.github.com/index.xml" rel="self" type="application/rss+xml"/><item><title>使用Obsdian写文章并通过脚本发布到Hugo测试</title><link>https://yutianovo.github.com/p/%E4%BD%BF%E7%94%A8obsdian%E5%86%99%E6%96%87%E7%AB%A0%E5%B9%B6%E9%80%9A%E8%BF%87%E8%84%9A%E6%9C%AC%E5%8F%91%E5%B8%83%E5%88%B0hugo%E6%B5%8B%E8%AF%95/</link><pubDate>Sat, 30 Nov 2024 00:00:00 +0000</pubDate><guid>https://yutianovo.github.com/p/%E4%BD%BF%E7%94%A8obsdian%E5%86%99%E6%96%87%E7%AB%A0%E5%B9%B6%E9%80%9A%E8%BF%87%E8%84%9A%E6%9C%AC%E5%8F%91%E5%B8%83%E5%88%B0hugo%E6%B5%8B%E8%AF%95/</guid><description>&lt;p>参考视频：https://www.youtube.com/watch?v=dnE7c0ELEH8&lt;br>
+参考文章：https://blog.networkchuck.com/posts/my-insane-blog-pipeline/&lt;/p>
+&lt;p>&lt;img src="https://yutianovo.github.com/images/Pasted%20image%2020241130212031.png"
+loading="lazy"
+alt="Image Description"
+>&lt;/p></description></item><item><title>Hugo 博客搭建时的问题</title><link>https://yutianovo.github.com/p/hugo-%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E6%97%B6%E7%9A%84%E9%97%AE%E9%A2%98/</link><pubDate>Mon, 25 Nov 2024 22:48:38 +0800</pubDate><guid>https://yutianovo.github.com/p/hugo-%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E6%97%B6%E7%9A%84%E9%97%AE%E9%A2%98/</guid><description>&lt;h2 id="不会自动换行">不会自动换行
+&lt;/h2>&lt;p>打开 hugo 博客的文件夹，全局搜索 goldmark&lt;br>
+如果是 toml 格式，就改为下面的内容&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-toml" data-lang="toml">&lt;span class="line">&lt;span class="cl">&lt;span class="p">[&lt;/span>&lt;span class="nx">goldmark&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">renderer&lt;/span>&lt;span class="p">]&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nx">unsafe&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="kc">true&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nx">hardwraps&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="kc">true&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>yaml 格式&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-yaml" data-lang="yaml">&lt;span class="line">&lt;span class="cl">&lt;span class="nt">markup&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">goldmark&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">renderer&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">hardWraps&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="kc">true&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>&lt;img src="chrome-extension://mapjgeachilmcbbokkgcbgpbakaaeehi/assets/check.svg"
+loading="lazy"
+>&lt;/p></description></item><item><title>Clash Verge 将订阅中的代理地址作为单个端口开放</title><link>https://yutianovo.github.com/p/clash-verge-%E5%B0%86%E8%AE%A2%E9%98%85%E4%B8%AD%E7%9A%84%E4%BB%A3%E7%90%86%E5%9C%B0%E5%9D%80%E4%BD%9C%E4%B8%BA%E5%8D%95%E4%B8%AA%E7%AB%AF%E5%8F%A3%E5%BC%80%E6%94%BE/</link><pubDate>Mon, 25 Nov 2024 22:24:27 +0800</pubDate><guid>https://yutianovo.github.com/p/clash-verge-%E5%B0%86%E8%AE%A2%E9%98%85%E4%B8%AD%E7%9A%84%E4%BB%A3%E7%90%86%E5%9C%B0%E5%9D%80%E4%BD%9C%E4%B8%BA%E5%8D%95%E4%B8%AA%E7%AB%AF%E5%8F%A3%E5%BC%80%E6%94%BE/</guid><description>&lt;p>来到 Profile 选中订阅地址，点击右键选择 Open File 或者 Edit File&lt;/p>
+&lt;p>&lt;img src="https://yutianovo.github.com/images/Pasted%20image%2020241130213818.png"
+loading="lazy"
+alt="Image Description"
+>&lt;/p>
+&lt;p>在 proxies 上方新增如下内容&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;span class="lnt">15
+&lt;/span>&lt;span class="lnt">16
+&lt;/span>&lt;span class="lnt">17
+&lt;/span>&lt;span class="lnt">18
+&lt;/span>&lt;span class="lnt">19
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-yaml" data-lang="yaml">&lt;span class="line">&lt;span class="cl">&lt;span class="nt">listeners&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>- &lt;span class="nt">name&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">mixed-in&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">type&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">mixed&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">port&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="m">27891&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">listen&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="m">127.0.0.1&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">proxy&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">proxies 中的 name 字段 - 美国节点&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">users&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>- &lt;span class="nt">admin&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">password &lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>- &lt;span class="nt">name&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">socks-in&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">type&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">socks&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">port&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="m">27892&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">listen&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="m">127.0.0.1&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">proxy&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">proxies 中的 name 字段 - 新加坡节点&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>- &lt;span class="nt">name&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">http-in&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">type&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">http&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">port&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="m">27893&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">listen&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="m">127.0.0.1&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">proxy&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">proxies 中的 name 字段 - 香港节点&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>以下配置将在本地启动一个节点，归属为香港，并开放同时支持 HTTP 和 SOCKS 协议的端口 &lt;code>17891&lt;/code>&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">port: &lt;span class="m">7890&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">socks-port: &lt;span class="m">7891&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">allow-lan: &lt;span class="nb">true&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">mode: Rule
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">log-level: info
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">external-controller: 127.0.0.1:9090
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">listeners:
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> - name: mixed-in
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> type: mixed
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> port: &lt;span class="m">27891&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> listen: 127.0.0.1
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> proxy: &lt;span class="s2">&amp;#34;🇭🇰 港hk&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">proxies:
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> - &lt;span class="o">{&lt;/span>name: 🇭🇰 港hk, server: ...&lt;span class="o">[&lt;/span>snip&lt;span class="o">]&lt;/span>... true&lt;span class="o">}&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>完成后选择重启应用，当订阅更新时，配置将消失。&lt;/p>
+&lt;p>&lt;img src="https://yutianovo.github.com/images/Pasted%20image%2020241130213828.png"
+loading="lazy"
+alt="Image Description"
+>&lt;/p></description></item><item><title>Archives</title><link>https://yutianovo.github.com/archives/</link><pubDate>Sun, 06 Mar 2022 00:00:00 +0000</pubDate><guid>https://yutianovo.github.com/archives/</guid><description/></item><item><title>CheatSheet</title><link>https://yutianovo.github.com/cheatsheet/</link><pubDate>Sun, 06 Mar 2022 00:00:00 +0000</pubDate><guid>https://yutianovo.github.com/cheatsheet/</guid><description>&lt;h2 id="cheat-sheet">Cheat Sheet
+&lt;/h2>&lt;p>&lt;a class="link" href="https://yutianqaq.github.io/hack-tools/" target="_blank" rel="noopener"
+>HackTools&lt;/a> &lt;a class="link" href="https://gist.github.com/yutianqaq" target="_blank" rel="noopener"
+>代码片段&lt;/a> &lt;a class="link" href="https://gist.github.com/yutianqaq/9529b55a7bee6c51f91d6cf975f9e7af" target="_blank" rel="noopener"
+>工具集合&lt;/a>&lt;/p>
+&lt;h3 id="编译命令_go">编译命令_Go
+&lt;/h3>&lt;p>&lt;code>go install mvdan.cc/garble@latest&lt;/code>&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># garble&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nv">CGO_ENABLED&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="m">0&lt;/span> &lt;span class="nv">GOOS&lt;/span>&lt;span class="o">=&lt;/span>windows &lt;span class="nv">GOARCH&lt;/span>&lt;span class="o">=&lt;/span>amd64 garble -tiny -literals -seed&lt;span class="o">=&lt;/span>random build -ldflags &lt;span class="s2">&amp;#34;-s -w -H=windowsgui&amp;#34;&lt;/span> -trimpath -o hello-grable.exe
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nv">CGO_ENABLED&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="m">0&lt;/span> &lt;span class="nv">GOOS&lt;/span>&lt;span class="o">=&lt;/span>windows &lt;span class="nv">GOARCH&lt;/span>&lt;span class="o">=&lt;/span>amd64 garble -seed&lt;span class="o">=&lt;/span>random build -ldflags &lt;span class="s2">&amp;#34;-s -w -H=windowsgui&amp;#34;&lt;/span> -trimpath -o hello-grable.exe
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># go&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nv">CGO_ENABLED&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="m">0&lt;/span> &lt;span class="nv">GOOS&lt;/span>&lt;span class="o">=&lt;/span>windows &lt;span class="nv">GOARCH&lt;/span>&lt;span class="o">=&lt;/span>amd64 go build -ldflags &lt;span class="s2">&amp;#34;-s -w -H=windowsgui&amp;#34;&lt;/span> -trimpath
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">## windows&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nb">set&lt;/span> &lt;span class="nv">CGO_ENABLED&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="m">0&lt;/span> &lt;span class="o">&amp;amp;&amp;amp;&lt;/span> &lt;span class="nb">set&lt;/span> &lt;span class="nv">GOOS&lt;/span>&lt;span class="o">=&lt;/span>windows &lt;span class="o">&amp;amp;&amp;amp;&lt;/span> &lt;span class="nb">set&lt;/span> &lt;span class="nv">GOARCH&lt;/span>&lt;span class="o">=&lt;/span>amd64 &lt;span class="o">&amp;amp;&amp;amp;&lt;/span> go build -ldflags &lt;span class="s2">&amp;#34;-s -w -H=windowsgui&amp;#34;&lt;/span> -trimpath
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h3 id="devenvexe">devenv.exe
+&lt;/h3>&lt;p>&lt;a class="link" href="https://learn.microsoft.com/en-us/visualstudio/ide/reference/devenv-command-line-switches?view=vs-2022" target="_blank" rel="noopener"
+>Devenv command line switches - Visual Studio | Microsoft Learn&lt;/a>&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">devenv /build Release .\Project.sln
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>用于更新平时在 github、x 看到的项目、技巧等&lt;/p>
+&lt;p>&lt;a class="link" href="https://pauljerimy.com/security-certification-roadmap/" target="_blank" rel="noopener"
+>https://pauljerimy.com/security-certification-roadmap/&lt;/a> - 证书表格&lt;/p>
+&lt;p>&lt;a class="link" href="https://ntdoc.m417z.com/" target="_blank" rel="noopener"
+>https://ntdoc.m417z.com/&lt;/a> - Nt 文档&lt;/p>
+&lt;p>&lt;a class="link" href="https://github.com/Flangvik/SharpCollection" target="_blank" rel="noopener"
+>https://github.com/Flangvik/SharpCollection&lt;/a> - C# 工具集&lt;/p>
+&lt;h2 id="命令帮助">命令帮助
+&lt;/h2>&lt;p>&lt;a class="link" href="https://yutianqaq.github.io/rubeus.txt" target="_blank" rel="noopener"
+>rubeus.exe&lt;/a> - &lt;a class="link" href="https://yutianqaq.github.io/sharphound.txt" target="_blank" rel="noopener"
+>sharphound.exe&lt;/a> - &lt;a class="link" href="https://github.com/skahwah/SQLRecon/wiki" target="_blank" rel="noopener"
+>sqlrecon.exe&lt;/a> - &lt;a class="link" href="https://yutianqaq.github.io/sigthief.txt" target="_blank" rel="noopener"
+>sigthief.py&lt;/a>&lt;/p>
+&lt;h3 id="信息搜集">信息搜集
+&lt;/h3>&lt;p>&lt;a class="link" href="https://taksec.github.io/google-dorks-bug-bounty/" target="_blank" rel="noopener"
+>Google Dorks for Bug Bounty&lt;/a> - Google Dorks 语法自动生成工具&lt;br>
+&lt;a class="link" href="https://github.com/msd0pe-1/cve-maker" target="_blank" rel="noopener"
+>https://github.com/msd0pe-1/cve-maker&lt;/a> - cve 搜索工具&lt;br>
+&lt;a class="link" href="https://github.com/vdjagilev/nmap-formatter" target="_blank" rel="noopener"
+>https://github.com/vdjagilev/nmap-formatter&lt;/a> - xml2cvs、json、html&lt;br>
+&lt;a class="link" href="https://github.com/projectdiscovery/httpx" target="_blank" rel="noopener"
+>https://github.com/projectdiscovery/httpx&lt;/a> - 存活、标题、指纹、技术探测&lt;/p>
+&lt;h3 id="利用">利用
+&lt;/h3>&lt;p>&lt;a class="link" href="https://github.com/projectdiscovery/nuclei" target="_blank" rel="noopener"
+>https://github.com/projectdiscovery/nuclei&lt;/a> - 基于模板的 POC 验证工具&lt;/p>
+&lt;h2 id="规避杀软">规避杀软
+&lt;/h2>&lt;h3 id="nim">Nim
+&lt;/h3>&lt;p>&lt;a class="link" href="https://github.com/icyguider/Nimcrypt2" target="_blank" rel="noopener"
+>icyguider/Nimcrypt2: .NET, PE, &amp;amp; Raw Shellcode Packer/Loader Written in Nim&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://github.com/aeverj/NimShellCodeLoader" target="_blank" rel="noopener"
+>aeverj/NimShellCodeLoader: 使用nim编写的shellcode加载器&lt;/a>&lt;/p>
+&lt;h2 id="cobalt-strike">Cobalt Strike
+&lt;/h2>&lt;h3 id="bof">BOF
+&lt;/h3>&lt;p>&lt;a class="link" href="https://github.com/ajpc500/BOFs" target="_blank" rel="noopener"
+>https://github.com/ajpc500/BOFs&lt;/a> - Collection of Beacon Object Files&lt;/p>
+&lt;h3 id="插件">插件
+&lt;/h3>&lt;p>&lt;a class="link" href="https://github.com/0xthirteen/MoveKit" target="_blank" rel="noopener"
+>https://github.com/0xthirteen/MoveKit&lt;/a> - 横向移动&lt;/p>
+&lt;p>&lt;a class="link" href="https://github.com/yutianqaq/CSx3Ldr" target="_blank" rel="noopener"
+>https://github.com/yutianqaq/CSx3Ldr&lt;/a> - 免杀 Nim&lt;/p></description></item><item><title>About</title><link>https://yutianovo.github.com/about/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://yutianovo.github.com/about/</guid><description>&lt;p>Github：https://github.com/yutianqaq&lt;/p>
+&lt;p>微信公众号：赛博雨天&lt;/p>
+&lt;h1 id="开源项目">开源项目
+&lt;/h1>&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>工具名称&lt;/th>
+&lt;th>项目链接&lt;/th>
+&lt;th>工具名称&lt;/th>
+&lt;th>项目链接&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>Spring Boot | 可定制的在线免杀平台&lt;/td>
+&lt;td>&lt;a class="link" href="https://github.com/yutianqaq/AVEvasionCraftOnline" target="_blank" rel="noopener"
+>AVEvasionCraftOnline&lt;/a>&lt;/td>
+&lt;td>Nim | 简单快捷的 CS 一键免杀插件&lt;/td>
+&lt;td>&lt;a class="link" href="https://github.com/yutianqaq/CSx3Ldr" target="_blank" rel="noopener"
+>CSx3Ldr&lt;/a>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Go | 多种Shellcode加密方式并自动生成解密方式&lt;/td>
+&lt;td>&lt;a class="link" href="https://github.com/yutianqaq/Supernova_CN" target="_blank" rel="noopener"
+>Supernova_CN&lt;/a>&lt;/td>
+&lt;td>Nim | 免杀 - x2Ldr&lt;/td>
+&lt;td>&lt;a class="link" href="https://github.com/yutianqaq/x2Ldr" target="_blank" rel="noopener"
+>x2Ldr&lt;/a>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Go | 二进制文件熵计算&lt;/td>
+&lt;td>&lt;a class="link" href="https://github.com/yutianqaq/EntropyCalc_Go" target="_blank" rel="noopener"
+>EntropyCalc_Go&lt;/a>&lt;/td>
+&lt;td>C | 本地分离免杀 - x1Ldr&lt;/td>
+&lt;td>&lt;a class="link" href="https://github.com/yutianqaq/x1Ldr" target="_blank" rel="noopener"
+>x1Ldr&lt;/a>&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;h1 id="认证">认证
+&lt;/h1>&lt;p>&lt;a style="display: inline;" href="https://api.eu.badgr.io/public/assertions/bVOCm2Z1QlKO3GhyDahfng">&lt;img style="display: inline;" src="crto.png" alt="CRTO" width="100" height="100" />&lt;/a>&lt;/p>
+&lt;h1 id="hackthebox">Hackthebox
+&lt;/h1>&lt;p>&lt;a href="https://app.hackthebox.com/profile/244079" target="_blank" rel="noopener">&lt;img src="http://www.hackthebox.eu/badge/image/244079">&lt;/a>&lt;/p></description></item><item><title>Search</title><link>https://yutianovo.github.com/search/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://yutianovo.github.com/search/</guid><description/></item><item><title>Tools</title><link>https://yutianovo.github.com/tools/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://yutianovo.github.com/tools/</guid><description>&lt;h1 id="heading">
+&lt;/h1>&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>描述&lt;/th>
+&lt;th>链接&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>反弹 shell 命令生成，Payload 集合&lt;/td>
+&lt;td>&lt;a class="link" href="https://yutianovo.github.com/hack-tools" >hack-tools&lt;/a>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>谷歌暗黑语法&lt;/td>
+&lt;td>&lt;a class="link" href="https://yutianovo.github.com/google-dorks-bug-bounty" >google-dorks-bug-bounty&lt;/a>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table></description></item></channel></rss>
