@@ -1,10 +1,12 @@
 ---
-title: "Hugo 博客搭建时的问题"
+title: Hugo 博客搭建时的问题
 description: 
 date: 2024-11-25T22:48:38+08:00
 hidden: false
 comments: false
 draft: false
+tags:
+  - init
 ---
 
 ## 不会自动换行
