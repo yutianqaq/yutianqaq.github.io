@@ -33,6 +33,7 @@ listeners:
     proxy: proxies 中的 name 字段 - 香港节点
     
 ```
+
 >[!note] 
 > 当有 `users` 字段时将作为需认证的代理
 > mixed 为将socks/http合并，socks 为仅限socks，http 为仅限 http
@@ -51,7 +52,7 @@ external-controller: 127.0.0.1:9090
 listeners:
   - name: mixed-in
     type: mixed
-    port: 17891
+    port: 27891
     listen: 127.0.0.1
     proxy: "🇭🇰 港hk"
 proxies:
