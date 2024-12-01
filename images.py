@@ -21,7 +21,7 @@ for filename in os.listdir(posts_dir):
         # Step 3: Replace image links and ensure URLs are correctly formatted
         for image in images:
             # Prepare the Markdown-compatible link with %20 replacing spaces
-            markdown_image = f"![Image Description](/images/{image.replace(' ', '%20')})"
+            markdown_image = f"[Image Description](/images/{image.replace(' ', '%20')})"
             content = content.replace(f"[[{image}]]", markdown_image)
             
             # Step 4: Copy the image to the Hugo static/images directory if it exists

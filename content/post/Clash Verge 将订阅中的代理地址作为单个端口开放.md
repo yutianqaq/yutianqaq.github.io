@@ -9,7 +9,7 @@ draft: false
 
 来到 Profile 选中订阅地址，点击右键选择 Open File 或者 Edit File
 
-!![Image Description](/images/Pasted%20image%2020241130213818.png)
+![Image Description](/images/Pasted%20image%2020241130213818.png)
 
 在 proxies 上方新增如下内容
 ```yaml
@@ -60,6 +60,6 @@ proxies:
 
 完成后选择重启应用，当订阅更新时，配置将消失。
 
-!![Image Description](/images/Pasted%20image%2020241130213828.png)
+![Image Description](/images/Pasted%20image%2020241130213828.png)
 
  
