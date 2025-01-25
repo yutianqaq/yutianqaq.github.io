@@ -26,4 +26,3 @@ markup:
       hardWraps: true
 ```
 
-![](chrome-extension://mapjgeachilmcbbokkgcbgpbakaaeehi/assets/check.svg)
