@@ -1,3 +1,11 @@
+---
+title: SharpFileTimeSetter-用于自定义文件的时间属性
+date: 2025-01-25
+draft: false
+tags: 
+hidden: false
+comments: false
+---
 
 # 简介
 用于自定义文件时间属性
