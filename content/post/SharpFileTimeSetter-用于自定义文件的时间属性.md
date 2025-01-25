@@ -7,8 +7,11 @@ hidden: false
 comments: false
 ---
 
+下载地址：https://github.com/yutianqaq/SharpFileTimeSetter
 # 简介
-用于自定义文件时间属性
+用于自定义文件时间属性，实现文件属性获取与自定义创建、修改、访问时间。
+
+还可以与同步指定文件的时间属性
 
 # 帮助
 ```powershell
