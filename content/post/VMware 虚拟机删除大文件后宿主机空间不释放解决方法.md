@@ -1,13 +1,13 @@
 ---
-title:
-  "{ title }": 
-date:
-  "{ date }": 
+title: VMware 虚拟机删除大文件后宿主机空间不释放解决方法
+date: 2025-08-06
 draft: false
-tags: []
+tags:
+  - 踩坑记录
 hidden: false
 comments: false
 ---
+
 
 在使用 VMware 虚拟化运行 Linux 系统时，很多人可能遇到这样的问题：
 
