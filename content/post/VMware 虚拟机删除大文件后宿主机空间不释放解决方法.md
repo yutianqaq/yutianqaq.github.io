@@ -1,3 +1,13 @@
+---
+title:
+  "{ title }": 
+date:
+  "{ date }": 
+draft: false
+tags: []
+hidden: false
+comments: false
+---
 
 在使用 VMware 虚拟化运行 Linux 系统时，很多人可能遇到这样的问题：
 
