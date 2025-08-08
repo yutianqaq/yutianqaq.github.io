@@ -1,5 +1,5 @@
 ---
-title: 未命名
+title: 安装 Windows 时绕过创建账户请求
 date: 2025-08-09
 draft: false
 tags:
