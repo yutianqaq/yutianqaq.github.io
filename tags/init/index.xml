@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Init on yutian's blog</title><link>https://yutianovo.github.com/tags/init/</link><description>Recent content in Init on yutian's blog</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Sat, 30 Nov 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://yutianovo.github.com/tags/init/index.xml" rel="self" type="application/rss+xml"/><item><title>使用Obsdian写文章并通过脚本发布到Hugo测试</title><link>https://yutianovo.github.com/p/%E4%BD%BF%E7%94%A8obsdian%E5%86%99%E6%96%87%E7%AB%A0%E5%B9%B6%E9%80%9A%E8%BF%87%E8%84%9A%E6%9C%AC%E5%8F%91%E5%B8%83%E5%88%B0hugo%E6%B5%8B%E8%AF%95/</link><pubDate>Sat, 30 Nov 2024 00:00:00 +0000</pubDate><guid>https://yutianovo.github.com/p/%E4%BD%BF%E7%94%A8obsdian%E5%86%99%E6%96%87%E7%AB%A0%E5%B9%B6%E9%80%9A%E8%BF%87%E8%84%9A%E6%9C%AC%E5%8F%91%E5%B8%83%E5%88%B0hugo%E6%B5%8B%E8%AF%95/</guid><description>&lt;p>参考视频：https://www.youtube.com/watch?v=dnE7c0ELEH8&lt;br>
+参考文章：https://blog.networkchuck.com/posts/my-insane-blog-pipeline/&lt;/p>
+&lt;p>&lt;img src="https://yutianovo.github.com/images/Pasted%20image%2020241130212031.png"
+loading="lazy"
+alt="Image Description"
+>&lt;/p></description></item><item><title>Hugo 博客搭建时的问题</title><link>https://yutianovo.github.com/p/hugo-%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E6%97%B6%E7%9A%84%E9%97%AE%E9%A2%98/</link><pubDate>Mon, 25 Nov 2024 22:48:38 +0800</pubDate><guid>https://yutianovo.github.com/p/hugo-%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E6%97%B6%E7%9A%84%E9%97%AE%E9%A2%98/</guid><description>&lt;h2 id="不会自动换行">不会自动换行
+&lt;/h2>&lt;p>打开 hugo 博客的文件夹，全局搜索 goldmark&lt;br>
+如果是 toml 格式，就改为下面的内容&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-toml" data-lang="toml">&lt;span class="line">&lt;span class="cl">&lt;span class="p">[&lt;/span>&lt;span class="nx">goldmark&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">renderer&lt;/span>&lt;span class="p">]&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nx">unsafe&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="kc">true&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nx">hardwraps&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="kc">true&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>yaml 格式&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-yaml" data-lang="yaml">&lt;span class="line">&lt;span class="cl">&lt;span class="nt">markup&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">goldmark&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">renderer&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">hardWraps&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="kc">true&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div></description></item></channel></rss>
