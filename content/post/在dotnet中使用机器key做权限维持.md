@@ -1,3 +1,11 @@
+---
+title: "在dotnet中使用机器key做权限维持"
+date: "2025-11-26"
+draft: false
+tags: 
+hidden: false
+comments: false
+---
 
 
 # Machinekey获取
