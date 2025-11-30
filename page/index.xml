@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Pages on yutian's blog</title><link>https://yutianovo.github.com/page/</link><description>Recent content in Pages on yutian's blog</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Sun, 06 Mar 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://yutianovo.github.com/page/index.xml" rel="self" type="application/rss+xml"/><item><title>Archives</title><link>https://yutianovo.github.com/archives/</link><pubDate>Sun, 06 Mar 2022 00:00:00 +0000</pubDate><guid>https://yutianovo.github.com/archives/</guid><description/></item><item><title>CheatSheet</title><link>https://yutianovo.github.com/cheatsheet/</link><pubDate>Sun, 06 Mar 2022 00:00:00 +0000</pubDate><guid>https://yutianovo.github.com/cheatsheet/</guid><description>&lt;h2 id="cheat-sheet"&gt;Cheat Sheet
+&lt;/h2&gt;&lt;p&gt;&lt;a class="link" href="https://yutianqaq.github.io/hack-tools/" target="_blank" rel="noopener"
+&gt;HackTools&lt;/a&gt; &lt;a class="link" href="https://gist.github.com/yutianqaq" target="_blank" rel="noopener"
+&gt;代码片段&lt;/a&gt; &lt;a class="link" href="https://gist.github.com/yutianqaq/9529b55a7bee6c51f91d6cf975f9e7af" target="_blank" rel="noopener"
+&gt;工具集合&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id="编译命令_go"&gt;编译命令_Go
+&lt;/h3&gt;&lt;p&gt;&lt;code&gt;go install mvdan.cc/garble@latest&lt;/code&gt;&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt; 1
+&lt;/span&gt;&lt;span class="lnt"&gt; 2
+&lt;/span&gt;&lt;span class="lnt"&gt; 3
+&lt;/span&gt;&lt;span class="lnt"&gt; 4
+&lt;/span&gt;&lt;span class="lnt"&gt; 5
+&lt;/span&gt;&lt;span class="lnt"&gt; 6
+&lt;/span&gt;&lt;span class="lnt"&gt; 7
+&lt;/span&gt;&lt;span class="lnt"&gt; 8
+&lt;/span&gt;&lt;span class="lnt"&gt; 9
+&lt;/span&gt;&lt;span class="lnt"&gt;10
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;# garble&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nv"&gt;CGO_ENABLED&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="m"&gt;0&lt;/span&gt; &lt;span class="nv"&gt;GOOS&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;windows &lt;span class="nv"&gt;GOARCH&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;amd64 garble -tiny -literals -seed&lt;span class="o"&gt;=&lt;/span&gt;random build -ldflags &lt;span class="s2"&gt;&amp;#34;-s -w -H=windowsgui&amp;#34;&lt;/span&gt; -trimpath -o hello-grable.exe
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nv"&gt;CGO_ENABLED&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="m"&gt;0&lt;/span&gt; &lt;span class="nv"&gt;GOOS&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;windows &lt;span class="nv"&gt;GOARCH&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;amd64 garble -seed&lt;span class="o"&gt;=&lt;/span&gt;random build -ldflags &lt;span class="s2"&gt;&amp;#34;-s -w -H=windowsgui&amp;#34;&lt;/span&gt; -trimpath -o hello-grable.exe
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;# go&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nv"&gt;CGO_ENABLED&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="m"&gt;0&lt;/span&gt; &lt;span class="nv"&gt;GOOS&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;windows &lt;span class="nv"&gt;GOARCH&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;amd64 go build -ldflags &lt;span class="s2"&gt;&amp;#34;-s -w -H=windowsgui&amp;#34;&lt;/span&gt; -trimpath
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;## windows&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nb"&gt;set&lt;/span&gt; &lt;span class="nv"&gt;CGO_ENABLED&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="m"&gt;0&lt;/span&gt; &lt;span class="o"&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class="nb"&gt;set&lt;/span&gt; &lt;span class="nv"&gt;GOOS&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;windows &lt;span class="o"&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class="nb"&gt;set&lt;/span&gt; &lt;span class="nv"&gt;GOARCH&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;amd64 &lt;span class="o"&gt;&amp;amp;&amp;amp;&lt;/span&gt; go build -ldflags &lt;span class="s2"&gt;&amp;#34;-s -w -H=windowsgui&amp;#34;&lt;/span&gt; -trimpath
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h3 id="devenvexe"&gt;devenv.exe
+&lt;/h3&gt;&lt;p&gt;&lt;a class="link" href="https://learn.microsoft.com/en-us/visualstudio/ide/reference/devenv-command-line-switches?view=vs-2022" target="_blank" rel="noopener"
+&gt;Devenv command line switches - Visual Studio | Microsoft Learn&lt;/a&gt;&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-fallback" data-lang="fallback"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;devenv /build Release .\Project.sln
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h2 id="开发环境"&gt;开发环境
+&lt;/h2&gt;&lt;p&gt;下载离线包&lt;br&gt;
+&lt;a class="link" href="http://download.microsoft.com/download/2/0/E/20E90413-712F-438C-988E-FDAA79A8AC3D/dotnetfx35.exe" target="_blank" rel="noopener"
+&gt;http://download.microsoft.com/download/2/0/E/20E90413-712F-438C-988E-FDAA79A8AC3D/dotnetfx35.exe&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;各个版本jdk下载&lt;br&gt;
+&lt;a class="link" href="https://repo.huaweicloud.com/java/jdk/11&amp;#43;28/" target="_blank" rel="noopener"
+&gt;https://repo.huaweicloud.com/java/jdk/11+28/&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id="系统和软件包自动换源"&gt;系统和软件包自动换源
+&lt;/h2&gt;&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;span class="lnt"&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-gdscript3" data-lang="gdscript3"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="n"&gt;curl&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;LO&lt;/span&gt; &lt;span class="n"&gt;https&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="o"&gt;//&lt;/span&gt;&lt;span class="n"&gt;gitee&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;com&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;RubyMetric&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;chsrc&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;releases&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;download&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;pre&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;chsrc_latest&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="n"&gt;_amd64&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;deb&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="n"&gt;sudo&lt;/span&gt; &lt;span class="n"&gt;sudo&lt;/span&gt; &lt;span class="n"&gt;dpkg&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;i&lt;/span&gt; &lt;span class="n"&gt;chsrc_latest&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="n"&gt;_amd64&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;deb&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h2 id="docker"&gt;docker
+&lt;/h2&gt;&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;span class="lnt"&gt;2
+&lt;/span&gt;&lt;span class="lnt"&gt;3
+&lt;/span&gt;&lt;span class="lnt"&gt;4
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-fallback" data-lang="fallback"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;curl https://get.docker.com/ | sh
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;# 换源（可选）
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;sudo chsrc set dockerhub
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h2 id="go"&gt;go
+&lt;/h2&gt;&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt; 1
+&lt;/span&gt;&lt;span class="lnt"&gt; 2
+&lt;/span&gt;&lt;span class="lnt"&gt; 3
+&lt;/span&gt;&lt;span class="lnt"&gt; 4
+&lt;/span&gt;&lt;span class="lnt"&gt; 5
+&lt;/span&gt;&lt;span class="lnt"&gt; 6
+&lt;/span&gt;&lt;span class="lnt"&gt; 7
+&lt;/span&gt;&lt;span class="lnt"&gt; 8
+&lt;/span&gt;&lt;span class="lnt"&gt; 9
+&lt;/span&gt;&lt;span class="lnt"&gt;10
+&lt;/span&gt;&lt;span class="lnt"&gt;11
+&lt;/span&gt;&lt;span class="lnt"&gt;12
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="cp"&gt;#!/bin/bash
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="cp"&gt;&lt;/span&gt;&lt;span class="nb"&gt;set&lt;/span&gt; -e
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;# Install snap if missing&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="k"&gt;if&lt;/span&gt; ! &lt;span class="nb"&gt;command&lt;/span&gt; -v snap &lt;span class="p"&gt;&amp;amp;&lt;/span&gt;&amp;gt;/dev/null&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="k"&gt;then&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="nb"&gt;echo&lt;/span&gt; &lt;span class="s2"&gt;&amp;#34;Installing snap...&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; sudo apt update &lt;span class="o"&gt;&amp;amp;&amp;amp;&lt;/span&gt; sudo apt install snapd -y
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="k"&gt;fi&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;# Install latest Go via snap&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;sudo snap install --classic go
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;# Add Go to PATH for current session&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nb"&gt;export&lt;/span&gt; &lt;span class="nv"&gt;PATH&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="nv"&gt;$PATH&lt;/span&gt;:/snap/bin
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nb"&gt;echo&lt;/span&gt; &lt;span class="s2"&gt;&amp;#34;✅ Go installed: &lt;/span&gt;&lt;span class="k"&gt;$(&lt;/span&gt;go version&lt;span class="k"&gt;)&lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h2 id="projectdiscovery"&gt;projectdiscovery
+&lt;/h2&gt;&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;span class="lnt"&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-fallback" data-lang="fallback"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;go install -v github.com/projectdiscovery/pdtm/cmd/pdtm@latest
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;pdtm -ia
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h2 id="gowitness"&gt;gowitness
+&lt;/h2&gt;&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-fallback" data-lang="fallback"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;go install github.com/sensepost/gowitness@latest
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-fallback" data-lang="fallback"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;gowitness scan file -f targets.txt --threads 5 --write-db
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;用于更新平时在 github、x 看到的项目、技巧等&lt;/p&gt;
+&lt;p&gt;&lt;a class="link" href="https://pauljerimy.com/security-certification-roadmap/" target="_blank" rel="noopener"
+&gt;https://pauljerimy.com/security-certification-roadmap/&lt;/a&gt; - 证书表格&lt;/p&gt;
+&lt;p&gt;&lt;a class="link" href="https://ntdoc.m417z.com/" target="_blank" rel="noopener"
+&gt;https://ntdoc.m417z.com/&lt;/a&gt; - Nt 文档&lt;/p&gt;
+&lt;p&gt;&lt;a class="link" href="https://github.com/Flangvik/SharpCollection" target="_blank" rel="noopener"
+&gt;https://github.com/Flangvik/SharpCollection&lt;/a&gt; - C# 工具集&lt;/p&gt;
+&lt;h2 id="命令帮助"&gt;命令帮助
+&lt;/h2&gt;&lt;p&gt;&lt;a class="link" href="https://yutianqaq.github.io/rubeus.txt" target="_blank" rel="noopener"
+&gt;rubeus.exe&lt;/a&gt; - &lt;a class="link" href="https://yutianqaq.github.io/sharphound.txt" target="_blank" rel="noopener"
+&gt;sharphound.exe&lt;/a&gt; - &lt;a class="link" href="https://github.com/skahwah/SQLRecon/wiki" target="_blank" rel="noopener"
+&gt;sqlrecon.exe&lt;/a&gt; - &lt;a class="link" href="https://yutianqaq.github.io/sigthief.txt" target="_blank" rel="noopener"
+&gt;sigthief.py&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id="信息搜集"&gt;信息搜集
+&lt;/h3&gt;&lt;p&gt;&lt;a class="link" href="https://taksec.github.io/google-dorks-bug-bounty/" target="_blank" rel="noopener"
+&gt;Google Dorks for Bug Bounty&lt;/a&gt; - Google Dorks 语法自动生成工具&lt;br&gt;
+&lt;a class="link" href="https://github.com/msd0pe-1/cve-maker" target="_blank" rel="noopener"
+&gt;https://github.com/msd0pe-1/cve-maker&lt;/a&gt; - cve 搜索工具&lt;br&gt;
+&lt;a class="link" href="https://github.com/vdjagilev/nmap-formatter" target="_blank" rel="noopener"
+&gt;https://github.com/vdjagilev/nmap-formatter&lt;/a&gt; - xml2cvs、json、html&lt;br&gt;
+&lt;a class="link" href="https://github.com/projectdiscovery/httpx" target="_blank" rel="noopener"
+&gt;https://github.com/projectdiscovery/httpx&lt;/a&gt; - 存活、标题、指纹、技术探测&lt;/p&gt;
+&lt;h3 id="利用"&gt;利用
+&lt;/h3&gt;&lt;p&gt;&lt;a class="link" href="https://github.com/projectdiscovery/nuclei" target="_blank" rel="noopener"
+&gt;https://github.com/projectdiscovery/nuclei&lt;/a&gt; - 基于模板的 POC 验证工具&lt;/p&gt;
+&lt;h2 id="规避杀软"&gt;规避杀软
+&lt;/h2&gt;&lt;h3 id="nim"&gt;Nim
+&lt;/h3&gt;&lt;p&gt;&lt;a class="link" href="https://github.com/icyguider/Nimcrypt2" target="_blank" rel="noopener"
+&gt;icyguider/Nimcrypt2: .NET, PE, &amp;amp; Raw Shellcode Packer/Loader Written in Nim&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class="link" href="https://github.com/aeverj/NimShellCodeLoader" target="_blank" rel="noopener"
+&gt;aeverj/NimShellCodeLoader: 使用nim编写的shellcode加载器&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id="cobalt-strike"&gt;Cobalt Strike
+&lt;/h2&gt;&lt;h3 id="bof"&gt;BOF
+&lt;/h3&gt;&lt;p&gt;&lt;a class="link" href="https://github.com/ajpc500/BOFs" target="_blank" rel="noopener"
+&gt;https://github.com/ajpc500/BOFs&lt;/a&gt; - Collection of Beacon Object Files&lt;/p&gt;
+&lt;h3 id="插件"&gt;插件
+&lt;/h3&gt;&lt;p&gt;&lt;a class="link" href="https://github.com/0xthirteen/MoveKit" target="_blank" rel="noopener"
+&gt;https://github.com/0xthirteen/MoveKit&lt;/a&gt; - 横向移动&lt;/p&gt;
+&lt;p&gt;&lt;a class="link" href="https://github.com/yutianqaq/CSx3Ldr" target="_blank" rel="noopener"
+&gt;https://github.com/yutianqaq/CSx3Ldr&lt;/a&gt; - 免杀 Nim&lt;/p&gt;</description></item><item><title>About</title><link>https://yutianovo.github.com/about/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://yutianovo.github.com/about/</guid><description>&lt;p&gt;Github：https://github.com/yutianqaq&lt;/p&gt;
+&lt;p&gt;微信公众号：赛博雨天&lt;/p&gt;
+&lt;h1 id="开源项目"&gt;开源项目
+&lt;/h1&gt;&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;工具名称&lt;/th&gt;
+&lt;th&gt;项目链接&lt;/th&gt;
+&lt;th&gt;工具名称&lt;/th&gt;
+&lt;th&gt;项目链接&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Spring Boot | 可定制的在线免杀平台&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/yutianqaq/AVEvasionCraftOnline" target="_blank" rel="noopener"
+&gt;AVEvasionCraftOnline&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;Nim | 简单快捷的 CS 一键免杀插件&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/yutianqaq/CSx3Ldr" target="_blank" rel="noopener"
+&gt;CSx3Ldr&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Go | 多种Shellcode加密方式并自动生成解密方式&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/yutianqaq/Supernova_CN" target="_blank" rel="noopener"
+&gt;Supernova_CN&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;Nim | 免杀 - x2Ldr&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/yutianqaq/x2Ldr" target="_blank" rel="noopener"
+&gt;x2Ldr&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Go | 二进制文件熵计算&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/yutianqaq/EntropyCalc_Go" target="_blank" rel="noopener"
+&gt;EntropyCalc_Go&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;C | 本地分离免杀 - x1Ldr&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/yutianqaq/x1Ldr" target="_blank" rel="noopener"
+&gt;x1Ldr&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h1 id="认证"&gt;认证
+&lt;/h1&gt;&lt;p&gt;&lt;a style="display: inline;" href="https://api.eu.badgr.io/public/assertions/bVOCm2Z1QlKO3GhyDahfng"&gt;&lt;img style="display: inline;" src="crto.png" alt="CRTO" width="100" height="100" /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h1 id="hackthebox"&gt;Hackthebox
+&lt;/h1&gt;&lt;p&gt;&lt;a href="https://app.hackthebox.com/profile/244079" target="_blank" rel="noopener"&gt;&lt;img src="http://www.hackthebox.eu/badge/image/244079"&gt;&lt;/a&gt;&lt;/p&gt;</description></item><item><title>Search</title><link>https://yutianovo.github.com/search/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://yutianovo.github.com/search/</guid><description/></item><item><title>Tools</title><link>https://yutianovo.github.com/tools/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://yutianovo.github.com/tools/</guid><description>&lt;h1 id=""&gt;
+&lt;/h1&gt;&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;描述&lt;/th&gt;
+&lt;th&gt;链接&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;反弹 shell 命令生成，Payload 集合&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://yutianovo.github.com/hack-tools" &gt;hack-tools&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;谷歌暗黑语法&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://yutianovo.github.com/google-dorks-bug-bounty" &gt;google-dorks-bug-bounty&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;</description></item></channel></rss>
