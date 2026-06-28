@@ -2,7 +2,7 @@
 
 # Set variables for Obsidian to Hugo copy
 $sourcePath = "C:\Users\yutian\book\posts"
-$destinationPath = "D:\YT-WorkSpace\blog\yutianovo.github.io\content\post"
+$destinationPath = "D:\YT-WorkSpace\blog\yutianqaq.github.io\content\post"
 
 # Set Github repo 
 $myrepo = "yutianqaq.github.io"

@@ -3,9 +3,9 @@ import re
 import shutil
 
 # Paths (using raw strings to handle Windows backslashes correctly)
-posts_dir = r"D:\YT-WorkSpace\blog\yutianovo.github.io\content\post"
+posts_dir = r"D:\YT-WorkSpace\blog\yutianqaq.github.io\content\post"
 attachments_dir = r"C:\Users\yutian\book\Img"
-static_images_dir = r"D:\YT-WorkSpace\blog\yutianovo.github.io\static\images"
+static_images_dir = r"D:\YT-WorkSpace\blog\yutianqaq.github.io\static\images"
 
 # Step 1: Process each markdown file in the posts directory
 for filename in os.listdir(posts_dir):
