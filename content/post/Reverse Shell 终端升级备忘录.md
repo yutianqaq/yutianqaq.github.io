@@ -1,6 +1,6 @@
 ---
-title: "Reverse Shell 终端升级备忘录"
-date: "2026-08-31"
+title: Reverse Shell 终端升级备忘录
+date: 2026-08-31
 draft: false
 tags: 
 hidden: false
