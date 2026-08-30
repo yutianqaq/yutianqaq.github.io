@@ -13,6 +13,6 @@ hasCJKLanguage = false
 
 # Change it to your Disqus shortname before using
 disqusShortname = "yutian"
-
+timeZone = "Asia/Shanghai"
 [pagination]
 pagerSize = 5
